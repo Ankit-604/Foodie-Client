@@ -1,0 +1,80 @@
+.navbar {
+  height: 61px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 38px;
+}
+.navbarLogo {
+  height: 53px;
+  width: 215px;
+  flex-shrink: 0;
+}
+.navbarLogo > img {
+  height: 100%;
+  width: 100%;
+}
+.page {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+.page > p {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 27px;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  flex-shrink: 0;
+}
+.HomePage {
+  width: 127px;
+  height: 45px;
+  background-color: #fc8a06;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 120px;
+  flex-shrink: 0;
+}
+.HomePage > h1 {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 27px;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #ffffff;
+}
+
+.loginRegister {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 55px;
+  width: 200px;
+  background-color: #000000;
+  border: 1px solid black;
+  border-radius: 120px;
+  flex-shrink: 0;
+}
+.userImg {
+  height: 25px;
+  width: 30px;
+}
+.userImg > img {
+  height: 100%;
+  width: 100%;
+}
+.loginRegister > h1 {
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 27px;
+  text-align: left;
+  cursor: pointer;
+}
+.loginRegister > h1 > span{
+  cursor: pointer;
+}

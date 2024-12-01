@@ -1,0 +1,220 @@
+.container {
+  padding: 0 70px;
+}
+.allNav {
+  padding: 0 50px;
+}
+.checkoutName {
+  width: 346px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 50px;
+  margin-top: 40px;
+}
+.checkoutName > img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+.checkoutName > h1 {
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 48px;
+  text-align: left;
+}
+.profileContainer {
+  padding: 0 50px;
+  margin-top: 30px;
+}
+.profileImageContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.profileImage {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.profileImage > img {
+  height: 70px;
+  width: 70px;
+}
+.profileImage > p {
+  font-size: 20px;
+  font-weight: 600;
+}
+.saveEditButton > button {
+  height: 36px;
+  width: 60px;
+  background: #fc8a06;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+}
+.profileDetails {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+  margin-top: 20px;
+}
+.profileFullName {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.profileFullName > input {
+  width: 98%;
+  height: 40px;
+  background: #f9f9f9;
+  outline: none;
+  border: none;
+  border-radius: 6px;
+  padding-left: 20px;
+}
+.profileFullName > p {
+  font-size: 12px;
+  font-weight: 400;
+}
+.profileEmail {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.profileEmail > input {
+  width: 100%;
+  height: 40px;
+  background: #f9f9f9;
+  outline: none;
+  border: none;
+  border-radius: 6px;
+  padding-left: 20px;
+}
+.profileEmail > p {
+  font-size: 12px;
+  font-weight: 400;
+}
+.profileGender {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.profileGender > input {
+  width: 98%;
+  height: 40px;
+  background: #f9f9f9;
+  outline: none;
+  border: none;
+  border-radius: 6px;
+  padding-left: 20px;
+}
+.profileGender > p {
+  font-size: 12px;
+  font-weight: 400;
+}
+.profileCountry {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.profileCountry > input {
+  width: 100%;
+  height: 40px;
+  background: #f9f9f9;
+  outline: none;
+  border: none;
+  border-radius: 6px;
+  padding-left: 20px;
+}
+.profileCountry > p {
+  font-size: 12px;
+  font-weight: 400;
+}
+.line {
+  width: 100%;
+  border: 1px solid #000000;
+  margin-top: 40px;
+}
+.cardDetailsWrapper {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.debitCards {
+  height: auto;
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.debitCards > h3 {
+  font-size: 22px;
+  font-weight: 600;
+}
+.cardDetails {
+  display: flex;
+  align-items: center;
+  border: 0.5px solid #00000080;
+  height: 70px;
+  width: 280px;
+  padding: 10px;
+  justify-content: space-between;
+  border-radius: 12px;
+}
+.cardImg {
+  height: 45px;
+  width: 45px;
+  background: #ffe8ce;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.cardnumber > p {
+  font-size: 16px;
+  font-weight: 500;
+}
+.cardnumber > h3 {
+  font-size: 10px;
+  font-weight: 500;
+  color: #83858a;
+}
+.cardDetails > img {
+  height: 14px;
+  width: 14px;
+  cursor: pointer;
+}
+.addCards {
+  height: 70px;
+  width: 200px;
+  border: 0.5px dotted #00000080;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+.addCards > button {
+  height: 45px;
+  width: 45px;
+  background: #ffe8ce;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: none;
+  font-size: 25px;
+  color: #fc8a06;
+  cursor: pointer;
+}
+.addCards > p {
+  font-size: 17px;
+  font-weight: 400;
+}
+.footer {
+  margin-top: 160px;
+}

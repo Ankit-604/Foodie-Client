@@ -1,0 +1,61 @@
+.popularRestaaurent {
+  height: 365px;
+  width: 100%;
+  margin-top: 40px;
+}
+.popularRestaaurentHeader {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  width: 100%;
+  padding: 0 20px;
+  flex-shrink: 0;
+}
+.popularRestaaurentHeader > h4 {
+  color: #000000;
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 48px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  flex-shrink: 0;
+}
+.popularRestaaurentImage {
+  display: flex;
+  gap: 20px;
+}
+.popularRestaaurentDiv1 {
+  height: 250px;
+  width: 212.5px;
+  background: #fc8a06;
+  border-radius: 12px;
+  flex-shrink: 0;
+  margin-top: 30px;
+  cursor: pointer;
+}
+.popularRestaaurentImage1 {
+  height: 183px;
+  width: 100%;
+}
+.popularRestaaurentImage1 > img {
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+}
+.RestaurentCards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+.RestaurentCards > h3 {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 27px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  flex-shrink: 0;
+}

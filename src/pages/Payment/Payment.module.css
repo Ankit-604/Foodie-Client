@@ -1,0 +1,355 @@
+.paymentContainer {
+  padding: 0 70px;
+  height: auto;
+  width: 100%;
+}
+.allNav {
+  padding: 0 50px;
+}
+
+.checkout {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.checkoutName {
+  width: 346px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.checkoutName > img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+.checkoutName > h1 {
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 48px;
+  text-align: left;
+}
+.Details {
+  display: flex;
+  gap: 20px;
+}
+
+.notesAndDetails {
+  height: auto;
+  width: 65%;
+}
+.getItem {
+  /* border: 1px solid #03081f; */
+  padding: 10px;
+  border-radius: 12px;
+}
+.checkoutDetails {
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid black;
+  border: 1px solid #ffe8ce;
+  border-radius: 56px;
+  padding: 15px;
+}
+.checkoutDetails > p {
+  color: #028643;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 25px;
+}
+.checkoutDetailsWrapper {
+  display: flex;
+  gap: 15px;
+}
+.checkoutDetailsWrapper > img {
+  height: 48px;
+  width: 48px;
+}
+.cartTitle {
+  display: flex;
+  flex-direction: column;
+}
+.cartTitle > h3 {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: left;
+}
+.allItem {
+  display: flex;
+  flex-direction: column;
+}
+.cartTitle > p {
+  color: #83858a;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 19.2px;
+  text-align: left;
+}
+.line {
+  height: 1px;
+  width: 100%;
+  background: #d9d9d9;
+  border: 1px solid #202938;
+  margin-top: 10px;
+}
+.notes {
+  height: 60px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 20px;
+}
+.notes > p {
+  color: #83858a;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 19.2px;
+  text-align: left;
+}
+.notes > textarea {
+  height: 50px;
+  width: 100%;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 19.2px;
+  border: 1px solid #202938;
+  resize: none;
+  border-radius: 120px;
+  text-align: left;
+  padding-left: 20px;
+  padding-top: 7px;
+  outline: none;
+}
+.allAddressDetails {
+  height: auto;
+  width: 35%;
+}
+.allAmount {
+  border: 1px solid #000000;
+  padding: 15px;
+  border-radius: 12px;
+}
+.input {
+  height: 65px;
+  width: 100%;
+  border-radius: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+.allInputItem {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.amount {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.amount > p {
+  color: #83858a;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+}
+.amount > h3 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 32px;
+}
+.mapPin {
+  width: 42px;
+  height: 42px;
+  border: 1px solid #2d3748;
+  box-shadow: 0px 8px 20px 0px #56585c1f;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mapPin > img {
+  height: 20px;
+  word-wrap: 20px;
+}
+
+.line2 {
+  height: 1px;
+  width: 100%;
+  background: #d9d9d9;
+  border: 1px solid #202938;
+  margin-top: 15px;
+}
+
+.allAmount > button {
+  height: 40px;
+  width: 100%;
+  background: #fc8a06;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 19.2px;
+  text-align: center;
+  color: #ffffff;
+  border: none;
+  border-radius: 100px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+.wallet {
+  height: 42px;
+  width: 42px;
+  border-radius: 50%;
+  border: 1px solid #2d3748;
+  box-shadow: 0px 8px 20px 0px #56585c1f;
+  background: #ffe8ce;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wallet > img {
+  height: 19px;
+  width: 19px;
+}
+.paymentCards {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid black;
+  border: 1px solid #ffe8ce;
+  border-radius: 56px;
+  padding: 15px;
+  margin-top: 20px;
+}
+.paymentCards > p {
+  color: #028643;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 25px;
+}
+.paymentCardsWrapper {
+  display: flex;
+  gap: 15px;
+}
+.paymentCardsWrapper > img {
+  height: 48px;
+  width: 48px;
+}
+.cardTitle {
+  display: flex;
+  flex-direction: column;
+}
+.cardTitle > h3 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25.6px;
+  text-align: center;
+}
+
+.mastercard {
+  height: 26px;
+  width: 26px;
+  border-radius: 50%;
+  border: 1px solid #2d3748;
+  box-shadow: 0px 8px 20px 0px #56585c1f;
+  background: #ffe8ce;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mastercardwallet > img {
+  height: 10px;
+  width: 10px;
+}
+
+.addBtn > button {
+  height: 20px;
+  width: 20px;
+  background: none;
+  border: none;
+  font-size: 30px;
+}
+.addBtnTitle > h3 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22.4px;
+  text-align: center;
+}
+.addCards{
+  height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid black;
+  border: 1px solid #ffe8ce;
+  border-radius: 56px;
+  padding: 15px;
+  margin-top: 20px;
+}
+.addCardssWrapper{
+  display: flex;
+  align-items: center;
+  gap: 15px; 
+}
+.check{
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+}
+
+.check >input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none; 
+  background-color: #fff;
+  border: 1.5px solid #83858A;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+}
+
+
+.check > input[type="checkbox"]:checked {
+  background-color: #007bff;
+  border-color: #007bff; 
+  box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.3); 
+}
+
+
+.check > input[type="checkbox"]:checked::before {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  margin: auto;
+  background-color: #fff;
+  border-radius: 50%; 
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.check >input[type="checkbox"]:hover {
+  border-color: #0056b3; 
+  box-shadow: 0 0 0 4px rgba(0, 86, 179, 0.2); 
+}
+.similarRestaurentWrapper{
+  margin-top: 100px;
+  padding: 0 70px;
+  padding-bottom: 70px;
+}

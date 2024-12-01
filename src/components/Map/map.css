@@ -1,0 +1,106 @@
+.map-container {
+  position: relative;
+}
+
+#map {
+  height: 659px;
+  width: 100%;
+  box-shadow: 5px 5px 14px 0px #00000040;
+  border-radius: 8px;
+}
+
+.custom-popup {
+  position: absolute;
+  top: 80px;
+  left: 80px;
+  width: 400px;
+  height: 439px;
+  border-radius: 12px;
+  color: white;
+  z-index: 1000;
+  background: #03081ff7;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 30px;
+}
+
+.cardDetails > h2 {
+  font-family: Poppins;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 38px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.cardDetails > p {
+    margin: 0;
+  color: #fc8a06;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 46px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+.number{
+    display: flex;
+    flex-direction: column;
+}
+.number > p{
+    margin: 0;
+    color: #fc8a06;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 46px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+.number > h3 {
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 31px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+.website > h3 {
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 31px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+.website > p{
+    margin: 0;
+    color: #fc8a06;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 46px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+.description > h3 {
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 31px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+.icon{
+  background-color: #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

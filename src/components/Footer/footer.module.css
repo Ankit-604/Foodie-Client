@@ -1,0 +1,313 @@
+.footer {
+    height: 45%;
+    width: 100%;
+  }
+  .footerList1 {
+    height: 371px;
+    width: 100%;
+    background-color: #d9d9d9;
+    display: flex;
+    padding-top: 50px;
+    padding-left: 80px;
+    padding-right: 60px;
+    padding-bottom: 20px;
+  }
+  .listItems1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 30%;
+  }
+  .footerLogo {
+    height: 66px;
+    width: 268px;
+  }
+  .footerLogo > img {
+    height: 100%;
+    width: 100%;
+  }
+  .store {
+    display: flex;
+    height: 53px;
+    width: 361px;
+    gap: 2px;
+    margin-top: 25px;
+  }
+  .store1 {
+    height: 100%;
+    width: 45%;
+    background-color: #000;
+    border-radius: 5px;
+  }
+  .store1 > img {
+    height: 100%;
+    width: 100%;
+    padding: 5px;
+  }
+  .store2 {
+    height: 100%;
+    width: 45%;
+  }
+  .store2 > img {
+    height: 100%;
+    width: 100%;
+  }
+  .company {
+    height: 20%;
+    width: 100%;
+    margin-top: 27px;
+  }
+  .company > p {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 22.5px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    
+  }
+  
+  .listItems2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 70%;
+  }
+  .item1 {
+    height: 100%;
+    width: 53%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+  .item1Heading {
+    color: #03081f;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 43px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+  .item1Input {
+    height: 50px;
+    width: 100%;
+    position: relative;
+  }
+  .item1Input > input {
+    height: 100%;
+    width: 100%;
+    border: none;
+    border-radius: 100px;
+    background-color: #d0d0d0;
+    padding-left: 20px;
+    color: #000000;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 43px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    outline: none;
+  }
+  .item1Input > button {
+    position: absolute;
+    height: 100%;
+    width: 40%;
+    background-color: #fc8a06;
+    border-radius: 100px;
+    border: none;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 27px;
+    text-align: center;
+    right: 0px;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+  .policy {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+  }
+  .policy > h3 {
+    color: #03081f;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 43px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+  .policy > h3 > span {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 43px;
+    text-align: left;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+  .item1Logo {
+    display: flex;
+    height: 50px;
+    width: 100%;
+    gap: 10px;
+    margin-left: 20px;
+  }
+  .item1Logo > img {
+    height: 45px;
+    width: 45px;
+  }
+  .item2 {
+    height: 100%;
+    width: 33%;
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+  .item2 > p {
+    color: #03081f;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 43px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+  .item2 > ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .item2 > ul > li {
+    list-style-type: none;
+    font-size: 15px;
+    font-weight: 400;
+    text-align: left;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+  .item3 {
+    height: 100%;
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+  .item3 > p {
+    color: #03081f;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 43px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+  .item3 > ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .item3 > ul > li {
+    list-style-type: none;
+    font-size: 15px;
+    font-weight: 400;
+    text-align: left;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+  .footerList2 {
+    height: 73px;
+    width: 100%;
+    background-color: #03081f;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 60px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+  
+  .copyright {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 22.5px;
+    text-align: left;
+    flex-shrink: 0;
+  }
+  
+  .terms {
+    display: flex;
+    gap: 40px;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 22.5px;
+    text-align: left;
+    flex-shrink: 0;
+  }
+  
+  @media (max-width: 1150px) {
+    .footerList2 {
+        padding: 0 20px;
+    }
+    .terms {
+        gap: 30px;
+    }
+  }
+  @media (max-width: 1024px) {
+    .footerList2 {
+        padding: 0 20px;
+    }
+    .terms {
+        gap: 20px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .footerList2 {
+        padding: 0 10px;
+    }
+    .terms,
+    .copyright {
+        font-size: 13px;
+        line-height: 20px;
+    }
+    .terms {
+        gap: 10px;
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .loginPage {
+  
+        align-items: center;
+    }
+    .items {
+        width: 80%; 
+        height: auto; 
+    }
+    .footerList1{
+      height: auto;
+    }
+    .footerList2{
+      height: 20%;
+    }
+  }
+  
