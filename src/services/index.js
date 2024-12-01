@@ -2,6 +2,8 @@ const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 
 export const userSignUp = async (data) => {
   try {
+    console.log("URL:", `${BACKEND_URL}/api/signup`); // Debugging: Log the URL
+    console.log("Data:", data); // Debugging: Log the data
     const response = await fetch(`${BACKEND_URL}/api/signup`, {
       method: "POST",
       headers: {
