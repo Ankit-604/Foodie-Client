@@ -162,7 +162,7 @@ export const getCheckoutItem = async (cartId) => {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": `${localStorage.getItem("token")}`,
+        Authorization: `${localStorage.getItem("token")}`,
       },
     });
     if (response.ok) {
@@ -182,7 +182,7 @@ export const getShareLink = async () => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": `${localStorage.getItem("token")}`,
+        Authorization: `${localStorage.getItem("token")}`,
       },
     });
     if (response.ok) {
@@ -202,7 +202,7 @@ export const userAddress = async (data) => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": `${localStorage.getItem("token")}`,
+        Authorization: `${localStorage.getItem("token")}`,
       },
       body: JSON.stringify(data),
     });
@@ -223,7 +223,7 @@ export const getUserAddress = async () => {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": `${localStorage.getItem("token")}`,
+        Authorization: `${localStorage.getItem("token")}`,
       },
     });
     if (response.ok) {
@@ -236,13 +236,13 @@ export const getUserAddress = async () => {
     throw new Error(error.message || "An unexpected error occurred");
   }
 };
-export const updatedUserAddress = async (data,addressId) => {
+export const updatedUserAddress = async (data, addressId) => {
   try {
     const response = await fetch(`${BACKEND_URL}/api/address/${addressId}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": `${localStorage.getItem("token")}`,
+        Authorization: `${localStorage.getItem("token")}`,
       },
       body: JSON.stringify(data),
     });
@@ -303,7 +303,7 @@ export const userDebitCard = async (data) => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": `${localStorage.getItem("token")}`,
+        Authorization: `${localStorage.getItem("token")}`,
       },
       body: JSON.stringify(data),
     });
@@ -324,7 +324,7 @@ export const UserCard = async () => {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": `${localStorage.getItem("token")}`,
+        Authorization: `${localStorage.getItem("token")}`,
       },
     });
     if (response.ok) {
@@ -337,13 +337,13 @@ export const UserCard = async () => {
     throw new Error(error.message || "An unexpected error occurred");
   }
 };
-export const updatedDebitCard = async (data,userCardId) => {
+export const updatedDebitCard = async (data, userCardId) => {
   try {
     const response = await fetch(`${BACKEND_URL}/api/debitCard/${userCardId}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": `${localStorage.getItem("token")}`,
+        Authorization: `${localStorage.getItem("token")}`,
       },
       body: JSON.stringify(data),
     });
@@ -363,12 +363,12 @@ export const deleteDebitCard = async (userCardId) => {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": `${localStorage.getItem("token")}`,
+        Authorization: `${localStorage.getItem("token")}`,
       },
     });
 
     if (response.ok) {
-      return response.json(); 
+      return response.json();
     } else {
       const errorResponse = await response.json();
       throw new Error(errorResponse.message || "Failed to delete card");
@@ -384,7 +384,7 @@ export const getUserProfile = async () => {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": `${localStorage.getItem("token")}`,
+        Authorization: `${localStorage.getItem("token")}`,
       },
     });
     if (response.ok) {
@@ -404,7 +404,7 @@ export const updatedUserProfile = async (data) => {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": `${localStorage.getItem("token")}`,
+        Authorization: `${localStorage.getItem("token")}`,
       },
       body: JSON.stringify(data),
     });
@@ -425,12 +425,12 @@ export const removeCartItem = async (cartId) => {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": `${localStorage.getItem("token")}`,
+        Authorization: `${localStorage.getItem("token")}`,
       },
     });
 
     if (response.ok) {
-      return response.json(); 
+      return response.json();
     } else {
       const errorResponse = await response.json();
       throw new Error(errorResponse.message || "Failed to delete card");
