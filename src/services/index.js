@@ -1,4 +1,5 @@
-const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
+const BACKEND_URL = "https://foodie-server-v291.onrender.com";
+
 console.log("BACKEND_URL:", BACKEND_URL);
 export const userSignUp = async (data) => {
   try {
