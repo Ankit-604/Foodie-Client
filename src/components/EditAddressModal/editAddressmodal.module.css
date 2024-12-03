@@ -1,65 +1,106 @@
-/* Backdrop for modal */
-.backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 999;
-  }
-  
-  /* Modal styles */
-  .modal {
-    background: white;
-    border-radius: 8px;
-    width: 60%;
-    max-width: 90%;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    position: relative;
-  }
-  
-  /* Form styling */
-  .form {
-    display: flex;
+.mainEditAddress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.sectionEditAddress {
+  background: white;
+  border-radius: 8px;
+  width: 60%;
+  max-width: 90%;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.rowEditAddress {
+  display: flex;
+  gap: 10px;
+}
+
+.input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 20%;
+  outline: none;
+}
+
+.textarea {
+  width: 100%;
+  height: 140px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: none;
+  outline: none;
+}
+.saveBtnEditAddress {
+  display: flex;
+  justify-content: end;
+}
+
+.saveButton {
+  background: orange;
+  width: 15%;
+  flex-shrink: 0;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.saveButton:hover {
+  background: darkorange;
+}
+
+.addressImageEditAddress {
+  display: flex;
+  gap: 10px;
+}
+.addressImageEditAddress {
+  width: 20px;
+  height: 20px;
+}
+.addressImageEditAddress > h2 {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  flex-shrink: 0;
+}
+@media (max-width: 992px) {
+  .rowEditAddress {
     flex-direction: column;
-    gap: 20px;
   }
-  
-  .row {
-    display: flex;
-    gap: 10px;
-  }
-  
   .input {
-    flex: 1;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    outline: none;
-  }
-  
-  .textarea {
     width: 100%;
-    height: 140px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    resize: none;
-    outline: none;
   }
-  .saveBtn {
+  .saveBtnEditAddress {
     display: flex;
     justify-content: end;
+    width: 100%;
   }
-  
+
   .saveButton {
     background: orange;
-    width: 15%;
+    width: 100%;
     flex-shrink: 0;
     color: white;
     border: none;
@@ -68,23 +109,15 @@
     cursor: pointer;
     font-size: 16px;
   }
-  
-  .saveButton:hover {
-    background: darkorange;
+}
+
+@media (max-width: 550px) {
+  .sectionEditAddress {
+    width: 70%;
   }
-  
-  .addressImage {
-    display: flex;
-    gap: 10px;
+}
+@media (max-width: 480px) {
+  .sectionEditAddress {
+    width: 90%;
   }
-  .addressImage {
-    width: 20px;
-    height: 20px;
-  }
-  .addressImage > h2 {
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 24px;
-    flex-shrink: 0;
-  }
-  
+}

@@ -16,6 +16,10 @@ const AddressPopup = ({ isOpen, onClose, setIsPopupOpen }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!localStorage.getItem("token")) {
+      toast.error("Please log in to continue.");
+      return;
+    }
     const { state, city, pinCode, phoneNumber, fullAddress } = formData;
     if (!state || !city || !pinCode || !phoneNumber || !fullAddress) {
       return toast.error("Missing required field");
@@ -31,6 +35,13 @@ const AddressPopup = ({ isOpen, onClose, setIsPopupOpen }) => {
       const response = await userAddress(formData);
       if (response.message === "Address added successfully") {
         toast.success("Address added successfully");
+        setFormData({
+          state: "",
+          city: "",
+          pinCode: "",
+          phoneNumber: "",
+          fullAddress: "",
+        });
       } else {
         toast.error(response.message);
       }
@@ -44,14 +55,17 @@ const AddressPopup = ({ isOpen, onClose, setIsPopupOpen }) => {
 
   if (!isOpen) return null;
   return (
-    <div className={styles.backdrop} onClick={onClose}>
-      <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
-        <div className={styles.addressImage}>
+    <div className={styles.sectionAddressPage} onClick={onClose}>
+      <div
+        className={styles.modalAddressPage}
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className={styles.addressImageAddressPage}>
           <img src={addressImg} alt="image" />
           <h2>Add Address</h2>
         </div>
         <form className={styles.form} onSubmit={handleSubmit}>
-          <div className={styles.row}>
+          <div className={styles.rowAddressPage}>
             <select
               className={styles.input}
               value={formData.state}
@@ -127,7 +141,7 @@ const AddressPopup = ({ isOpen, onClose, setIsPopupOpen }) => {
               setFormData({ ...formData, fullAddress: e.target.value })
             }
           ></textarea>
-          <div className={styles.saveBtn}>
+          <div className={styles.saveBtnAddressPage}>
             <button type="submit" className={styles.saveButton}>
               {loading ? "Loading" : "Save"}
             </button>

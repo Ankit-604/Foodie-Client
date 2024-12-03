@@ -14,7 +14,6 @@ const AddCardInProfile = ({ isOpen, onClose, setPopupOpen }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData);
 
     const { cardNumber, expire, cvc, cardName } = formData;
     if (!cardNumber || !expire || !cvc || !cardName) {
@@ -59,8 +58,11 @@ const AddCardInProfile = ({ isOpen, onClose, setPopupOpen }) => {
   if (!isOpen) return null;
 
   return (
-    <div className={styles.overlay} onClick={onClose}>
-      <div className={styles.container} onClick={(e) => e.stopPropagation()}>
+    <div className={styles.AddCardOverlay} onClick={onClose}>
+      <div
+        className={styles.AddCardContainer}
+        onClick={(e) => e.stopPropagation()}
+      >
         <h2>Add Payment Method</h2>
         <form onSubmit={handleSubmit}>
           <label>
@@ -100,14 +102,14 @@ const AddCardInProfile = ({ isOpen, onClose, setPopupOpen }) => {
             Name on Card
             <input
               type="text"
-              placeholder="Your Name"
+              placeholder="Your Card Name"
               value={formData.cardName}
               onChange={(e) =>
                 setFormData({ ...formData, cardName: e.target.value })
               }
             />
           </label>
-          <div className={styles.actions}>
+          <div className={styles.AddCardActions}>
             <button
               type="button"
               className={styles.cancelButton}
@@ -115,15 +117,14 @@ const AddCardInProfile = ({ isOpen, onClose, setPopupOpen }) => {
             >
               Cancel
             </button>
-            <div className={styles.cancelSaveButton}>
-              <button
-                type="submit"
-                disabled={loading}
-                className={styles.saveButton}
-              >
-                {loading ? "Loading" : "Save Changes"}
-              </button>
-            </div>
+
+            <button
+              type="submit"
+              disabled={loading}
+              className={styles.saveButton}
+            >
+              {loading ? "Loading" : "Save Changes"}
+            </button>
           </div>
         </form>
       </div>

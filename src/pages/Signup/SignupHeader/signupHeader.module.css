@@ -1,44 +1,44 @@
-.header {
+.SignupHeaderMain {
   display: flex;
   height: 140%;
   width: 100%;
   padding: 20px;
   gap: 10px;
 }
-.loginPage {
+.loginPageSignupHeader {
   display: flex;
   height: 100%;
   width: 50%;
   justify-content: center;
-  align-items: center;
+  align-itemssignupheader: center;
 }
-.items {
+.itemsSignupHeader {
   width: 60%;
   height: 85%;
 }
-.loginLogoWrapper {
+.loginLogoPartSignupHeader {
   display: flex;
   justify-content: center;
 }
-.loginLogo {
+.loginLogoPSignupHeader {
   height: 13%;
   width: 47%;
   display: flex;
-  align-items: center;
+  align-itemssignupheader: center;
 }
-.loginLogo > img {
+.loginLogoPSignupHeader > img {
   height: 100%;
   width: 100%;
 }
-.loginWelcome {
+.loginWelcomeSignupHeader {
   height: 10%;
   width: 100%;
   display: flex;
-  align-items: center;
+  align-itemssignupheader: center;
   justify-content: start;
   margin-top: 30px;
 }
-.loginWelcome > h1 {
+.loginWelcomeSignupHeader > h1 {
   font-size: 34px;
   font-weight: 600;
   line-height: 36px;
@@ -47,15 +47,15 @@
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
 }
-.loginDescription {
+.loginDescpSignupHeader {
   height: auto;
   width: 100%;
   display: flex;
-  align-items: center;
+  align-itemssignupheader: center;
   justify-content: start;
   margin-top: 20px;
 }
-.loginDescription > p {
+.loginDescpSignupHeader > p {
   font-size: 19px;
   color: #313957;
   font-weight: 400;
@@ -102,7 +102,7 @@ form {
   border-radius: 100px;
   padding-left: 20px;
 }
-.loginBtn {
+.loginBtnSignupHeader {
   height: 50px;
   width: 100%;
   font-size: 20px;
@@ -124,7 +124,7 @@ form {
   width: 100%;
   margin-top: 31px;
   display: flex;
-  align-items: center;
+  align-itemssignupheader: center;
   justify-content: center;
 }
 .signup > p {
@@ -148,7 +148,7 @@ form {
   cursor: pointer;
   color: #fc8a06;
 }
-.loginImg {
+.loginImgeSignupHeader {
   height: 100%;
   width: 50%;
 }
@@ -173,7 +173,7 @@ form {
   .footerList2 {
     padding: 0 20px;
   }
-  .header {
+  .SignupHeaderMain {
     height: 140%;
   }
   .terms {
@@ -196,13 +196,13 @@ form {
 }
 
 @media (max-width: 1024px) {
-  .loginPage {
-    align-items: center;
+  .loginPageSignupHeader {
+    align-itemssignupheader: center;
   }
-  .loginImg {
+  .loginImgeSignupHeader {
     height: auto;
   }
-  .items {
+  .itemsSignupHeader {
     width: 80%;
     height: auto;
   }
@@ -211,5 +211,54 @@ form {
   }
   .footerList2 {
     height: 20%;
+  }
+}
+@media (max-width: 992px) {
+  .loginImgeSignupHeader {
+    display: none;
+  }
+  .loginPageSignupHeader {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .loginDescpSignupHeader > p {
+    font-size: 15px;
+    line-height: 24px;
+  }
+  .loginDescpSignupHeader > p > span {
+    font-size: 15px;
+  }
+  .loginWelcomeSignupHeader > h1 {
+    font-size: 28px;
+    line-height: 10px;
+  }
+}
+@media (max-width: 480px) {
+  .signup > p {
+    font-size: 15px;
+  }
+  .SignupHeaderMain {
+    padding: 20px 0px;
+  }
+  .input > input {
+    font-size: 13px;
+  }
+}
+@media (max-width: 415px) {
+  .signup > p {
+    font-size: 13px;
+  }
+  .loginDescpSignupHeader > p {
+    font-size: 13px;
+    line-height: 24px;
+  }
+  .loginWelcomeSignupHeader > h1 {
+    font-size: 22px;
+    line-height: 10px;
+  }
+  .loginDescpSignupHeader > p > span {
+    font-size: 13px;
   }
 }

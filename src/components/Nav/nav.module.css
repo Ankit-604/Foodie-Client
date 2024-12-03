@@ -4,92 +4,259 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 0px;
   border-radius: 0px 0px 12px 12px;
-  border: 1px 0px 0px 0px;
-  opacity: 0px;
-  background: #fafafa;
   border: 1px solid #0000001a;
+  background: #fafafa;
+  opacity: 1;
 }
 
-.order {
+.orderNav {
   display: flex;
   gap: 15px;
   padding-left: 35px;
 }
-.orderImg {
+
+.orderImageNav {
   height: 25px;
   width: 25px;
   flex-shrink: 0;
 }
-.orderImg > img {
+
+.orderImageNav > img {
   height: 100%;
   width: 100%;
 }
-.order > h1 {
+
+.orderNav > h1 {
   font-size: 15px;
   font-weight: 600;
   line-height: 22.5px;
   text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-  flex-shrink: 0;
 }
-.order > h1 > span {
+
+.orderNav > h1 > span {
   font-size: 15px;
   font-weight: 700;
   line-height: 22.5px;
   text-align: left;
   text-decoration-line: underline;
-  text-decoration-style: solid;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
   color: #fc8a06;
 }
 
-.locationCart {
+.cartLocationNav {
   display: flex;
   align-items: center;
   gap: 50px;
 }
-.location {
+
+.locationNav {
   display: flex;
   align-items: center;
   gap: 10px;
   flex-shrink: 0;
 }
+
 .locationImg {
   height: 25px;
   width: 25px;
 }
+
 .locationImg > img {
   height: 100%;
   width: 100%;
 }
-.location > h1 {
+
+.locationNav > h1 {
   font-size: 15px;
   font-weight: 600;
   line-height: 22.5px;
   text-align: left;
 }
-.location > h3 {
+
+.locationNav > h3 {
   color: #fc8a06;
   font-size: 14px;
   font-weight: 600;
   line-height: 21px;
   text-align: left;
   text-decoration-line: underline;
-  text-decoration-style: solid;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-}
-.cart {
-  height: 70px;
-  width: 378px;
-  flex-shrink: 0;
   cursor: pointer;
 }
-.cart > img{
-    height: 100%;
-    width: 100%;
+
+.cartNav {
+  height: 70px;
+  width: 338px;
+  flex-shrink: 0;
+  cursor: pointer;
+  background: #028643;
+  border-radius: 0px 0px 12px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cartImageNav {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  height: 100%;
+}
+.cartImageNav > p {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 10px 0;
+  margin-right: 20px;
+}
+.cartImageNav > img {
+  height: 50px;
+  width: 50px;
+  margin: 10px 0;
+  margin-left: 10px;
+}
+.navLine {
+  height: 100%;
+  border: 0.5px solid #ffffff;
+}
+.forwardNav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 25%;
+}
+.forwardNav > img {
+  height: 30px;
+  width: 30px;
+  margin-left: 20px;
+}
+.menuNav {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  display: none;
+}
+.logoNav {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+.navLine1 {
+  height: 100%;
+  width: 1px;
+  border: 1px solid #0000004d;
+}
+.menuImage {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 20px;
+  padding-right: 20px;
+}
+@media (max-width: 1280px) {
+  .cartNav {
+    width: 260px;
+  }
+  .cartImageNav > P {
+    margin-right: 5px;
+  }
+  .forwardNav {
+    width: 19%;
+  }
+  .forwardNav > img {
+    margin-left: 8px;
+  }
+  .orderNav > h1 {
+    font-size: 13px;
+  }
+  .orderNav > h1 > span {
+    font-size: 13px;
+  }
+  .locationNav > h1 {
+    font-size: 13px;
+  }
+  .locationNav > h3 {
+    font-size: 13px;
+  }
+}
+@media (max-width: 1200px) {
+  .cartLocationNav {
+    gap: 30px;
+  }
+
+  .orderNav {
+    padding-left: 15px;
+  }
+  .orderNav > h1 {
+    font-size: 12px;
+  }
+  .orderNav > h1 > span {
+    font-size: 12px;
+  }
+  .locationNav > h1 {
+    font-size: 12px;
+  }
+  .locationNav > h3 {
+    font-size: 13px;
+  }
+  .orderImageNav {
+    height: 20px;
+    width: 20px;
+  }
+  .locationImg {
+    height: 20px;
+    width: 20px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .orderNav > h1 {
+    font-size: 11px;
+  }
+  .orderNav > h1 > span {
+    font-size: 11px;
+  }
+  .locationNav > h1 {
+    font-size: 11px;
+  }
+  .locationNav > h3 {
+    font-size: 12px;
+  }
+  .orderNav {
+    gap: 10px;
+  }
+}
+@media (max-width: 1024px) {
+  .orderNav > h1 {
+    font-size: 10px;
+  }
+  .orderNav > h1 > span {
+    font-size: 10px;
+  }
+  .locationNav > h1 {
+    font-size: 10px;
+  }
+  .locationNav > h3 {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 992px) {
+  .orderNav {
+    display: none;
+  }
+  .cartLocationNav {
+    display: none;
+  }
+  .menuNav {
+    display: flex;
+  }
+  nav {
+    background: none;
+    border: none;
+  }
 }

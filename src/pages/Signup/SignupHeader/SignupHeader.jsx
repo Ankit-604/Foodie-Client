@@ -73,23 +73,23 @@ const SignupHeader = () => {
       };
       getImageUrl();
     } catch (error) {
-      console.error(error);
+      toast.error(error);
     }
   }, []);
   return (
     <>
-      <div className={styles.header}>
-        <div className={styles.loginPage}>
-          <div className={styles.items}>
-            <div className={styles.loginLogoWrapper}>
-              <div className={styles.loginLogo}>
+      <div className={styles.SignupHeaderMain}>
+        <div className={styles.loginPageSignupHeader}>
+          <div className={styles.itemsSignupHeader}>
+            <div className={styles.loginLogoPartSignupHeader}>
+              <div className={styles.loginLogoPSignupHeader}>
                 <img src={headerLogo} alt="loginLogo" />
               </div>
             </div>
-            <div className={styles.loginWelcome}>
+            <div className={styles.loginWelcomeSignupHeader}>
               <h1>Welcome Back 👋 </h1>
             </div>
-            <div className={styles.loginDescription}>
+            <div className={styles.loginDescpSignupHeader}>
               <p>
                 Today is a new day. It's your day. You shape it. Sign up to
                 start ordering.
@@ -149,7 +149,7 @@ const SignupHeader = () => {
                 />
               </div>
               <button
-                className={styles.loginBtn}
+                className={styles.loginBtnSignupHeader}
                 disabled={loading}
                 type="submit"
               >
@@ -164,7 +164,7 @@ const SignupHeader = () => {
             </div>
           </div>
         </div>
-        <div className={styles.loginImg}>
+        <div className={styles.loginImgeSignupHeader}>
           <div className={styles.img}>
             {image.map((img, index) => (
               <img key={index} src={img.data.loginImage} alt="loginImg" />

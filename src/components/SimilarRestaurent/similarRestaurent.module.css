@@ -1,9 +1,10 @@
-.popularRestaaurent {
+.similarRestaurant {
   height: 365px;
   width: 100%;
   margin-top: 40px;
 }
-.popularRestaaurentHeader {
+
+.similarRestaurantHeader {
   display: flex;
   align-items: center;
   height: 60px;
@@ -11,7 +12,8 @@
   padding: 0 20px;
   flex-shrink: 0;
 }
-.popularRestaaurentHeader > h4 {
+
+.similarRestaurantHeader > h4 {
   color: #000000;
   font-size: 26px;
   font-weight: 800;
@@ -21,11 +23,13 @@
   text-decoration-skip-ink: none;
   flex-shrink: 0;
 }
-.popularRestaaurentImage {
+
+.similarRestaurantImage {
   display: flex;
   gap: 20px;
 }
-.popularRestaaurentDiv1 {
+
+.similarRestaurantDiv1 {
   height: 250px;
   width: 212.5px;
   background: #fc8a06;
@@ -34,22 +38,26 @@
   margin-top: 30px;
   cursor: pointer;
 }
-.popularRestaaurentImage1 {
+
+.similarRestaurantImage1 {
   height: 183px;
   width: 100%;
 }
-.popularRestaaurentImage1 > img {
+
+.similarRestaurantImage1 > img {
   height: 100%;
   width: 100%;
   cursor: pointer;
 }
-.RestaurentCards {
+
+.similarRestaurantCards {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 20px;
 }
-.RestaurentCards > h3 {
+
+.similarRestaurantCards > h3 {
   color: #ffffff;
   font-size: 16px;
   font-weight: 700;
@@ -58,4 +66,58 @@
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
   flex-shrink: 0;
+}
+@media (max-width: 1200px) {
+  .similarRestaurantDiv1 {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+  }
+  .similarRestaurantImage1 {
+    height: 200px;
+    gap: 5px;
+    overflow: auto;
+  }
+  .similarRestaurantImage1 > img {
+    object-fit: fill;
+  }
+  .similarRestaurantCards {
+    margin: 10px 10px;
+  }
+  .similarRestaurantCards > h3 {
+    font-size: 14px;
+  }
+  .similarRestaurantImage {
+    gap: 15px;
+  }
+}
+@media (max-width: 1200px) {
+  .similarRestaurantDiv1 {
+    height: 170px;
+    display: flex;
+    flex-direction: column;
+  }
+  .similarRestaurantImage1 {
+    height: 200px;
+    gap: 3px;
+  }
+  .similarRestaurantCards > h3 {
+    font-size: 12px;
+  }
+  .similarRestaurant {
+    height: 280px;
+  }
+}
+@media (max-width: 992px) {
+  .similarRestaurantDiv1 {
+    width: 140px;
+  }
+  .similarRestaurantImage {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .similarRestaurant {
+    height: auto;
+    margin-bottom: 40px;
+  }
 }

@@ -1,4 +1,4 @@
-.map-container {
+.mapContainer {
   position: relative;
 }
 
@@ -9,7 +9,7 @@
   border-radius: 8px;
 }
 
-.custom-popup {
+.customPopup {
   position: absolute;
   top: 80px;
   left: 80px;
@@ -26,8 +26,20 @@
   padding-left: 30px;
 }
 
-.cardDetails > h2 {
+.cardDetailsMap > h2,
+.cardDetailsMap > p,
+.numberMap > p,
+.numberMap > h3,
+.websiteMap > h3,
+.websiteMap > p,
+.descriptionMap > h3 {
   font-family: Poppins;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  text-align: left;
+}
+
+.cardDetailsMap > h2 {
   font-size: 32px;
   font-weight: 700;
   line-height: 38px;
@@ -36,8 +48,9 @@
   text-decoration-skip-ink: none;
 }
 
-.cardDetails > p {
-    margin: 0;
+.cardDetailsMap > p,
+.numberMap > p,
+.websiteMap > p {
   color: #fc8a06;
   font-size: 18px;
   font-weight: 700;
@@ -46,22 +59,15 @@
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
 }
-.number{
-    display: flex;
-    flex-direction: column;
+
+.numberMap {
+  display: flex;
+  flex-direction: column;
 }
-.number > p{
-    margin: 0;
-    color: #fc8a06;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 46px;
-    text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-}
-.number > h3 {
-  font-family: Poppins;
+
+.numberMap > h3,
+.websiteMap > h3,
+.descriptionMap > h3 {
   font-size: 16px;
   font-weight: 400;
   line-height: 31px;
@@ -78,18 +84,18 @@
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
 }
-.website > p{
-    margin: 0;
-    color: #fc8a06;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 46px;
-    text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
+.website > p {
+  margin: 0;
+  color: #fc8a06;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 46px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
 }
-.description > h3 {
-  font-family: Poppins;
+
+.descriptionMap > h3 {
   font-size: 14px;
   font-weight: 400;
   line-height: 31px;
@@ -97,10 +103,49 @@
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
 }
-.icon{
+.icon {
   background-color: #000;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+@media (max-width: 600px) {
+  .customPopup {
+    top: 200px;
+    left: 30px;
+  }
+}
+@media (max-width: 500px) {
+  .customPopup {
+    top: 130px;
+    left: 30px;
+    width: 300px;
+    height: 350px;
+  }
+  #map {
+    height: 500px;
+  }
+}
+@media (max-width: 415px) {
+  .customPopup {
+    top: 130px;
+    left: 30px;
+    width: 250px;
+    height: 300px;
+  }
+  .cardDetailsMap > h2 {
+    font-size: 25px;
+    line-height: 10px;
+    margin-top: 40px;
+  }
+  .descriptionMap > h3 {
+    font-size: 12px;
+  }
+  .websiteMap {
+    display: none;
+  }
+  #map {
+    height: 500px;
+  }
 }

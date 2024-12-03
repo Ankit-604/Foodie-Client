@@ -8,6 +8,8 @@ import { DeleteUserAddressById, getUserAddress } from "../../services";
 import toast from "react-hot-toast";
 import EditAddressModal from "../../components/EditAddressModal/EditAddressModal";
 import { useNavigate } from "react-router-dom";
+import Footer from "../../components/Footer/Footer";
+import arrowLeftImg from "../../assets/ArrowLeft.png";
 
 const Address = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -23,6 +25,9 @@ const Address = () => {
   const handleEditPopup = () => setIsEditPopup(false);
 
   useEffect(() => {
+    if (!localStorage.getItem("token")) {
+      return;
+    }
     const fetchAddresses = async () => {
       try {
         const response = await getUserAddress();
@@ -66,65 +71,92 @@ const Address = () => {
   };
 
   return (
-    <div className={styles.container}>
-      <Nav />
-      <AllNav />
-      <div className={styles.address}>
-        <div className={styles.addressHeading}>
-          <img src={arrow} alt="arrow-icon" onClick={() => navigate(-1)} />
-          <p>Your Addresses</p>
+    <>
+      <div className={styles.containerAddresss}>
+        <Nav />
+        <div className={styles.allNavAddresss}>
+          <AllNav />
         </div>
-
-        <div className={styles.addAddress}>
-          <div className={styles.addAddressBtn}>
-            <div className={styles.addBtn}>
-              <button onClick={() => setIsPopupOpen(true)}>+</button>
+        <div className={styles.address}>
+          <div className={styles.headingAddresss}>
+            <img src={arrow} alt="arrow-icon" onClick={() => navigate(-1)} />
+            <p>Your Addresses</p>
+          </div>
+          <div className={styles.checkoutArrowAddresss}>
+            <div className={styles.arrowLeftAddresss}>
+              <img
+                src={arrowLeftImg}
+                alt="arrow-image"
+                onClick={() => navigate(-1)}
+              />
             </div>
-            <p>Add Address</p>
+            <p>Your Addresses</p>
           </div>
 
-          {userAddress.length > 0 &&
-            userAddress.map((Address) => (
-              <div className={styles.userAddress} key={Address._id}>
-                <div className={styles.userName}>
-                  <p>{userName}</p>
-                  <button
-                    onClick={() => handleSelectedAddress(Address)}
-                    className={
-                      selectedAddressId === Address._id
-                        ? styles.selectedButton
-                        : styles.selectButton
+          <div className={styles.addAddress}>
+            <div className={styles.addAddressButton}>
+              <div className={styles.addbuttonAddress}>
+                <button
+                  onClick={() => {
+                    if (!localStorage.getItem("token")) {
+                      toast.error("Please log in to continue.");
+                      return;
                     }
-                  >
-                    {localAddressId === Address._id ? "Selected" : "Select"}
-                  </button>
-                </div>
-                <p>
-                  {Address.fullAddress}, {Address.city}, {Address.state},{" "}
-                  {Address.pinCode}
-                </p>
-                <h3>Phone Number: {Address.phoneNumber}</h3>
-                <div className={styles.editRemove}>
-                  <p onClick={() => handleEdit(Address._id)}>Edit</p>
-                  <div className={styles.line}></div>
-                  <p onClick={() => handleRemove(Address._id)}>Remove</p>
-                </div>
+                    setIsPopupOpen(true);
+                  }}
+                >
+                  +
+                </button>
               </div>
-            ))}
+              <p>Add Address</p>
+            </div>
+
+            {userAddress.length > 0 &&
+              userAddress.map((Address) => (
+                <div className={styles.userAddressAddress} key={Address._id}>
+                  <div className={styles.userNameAddress}>
+                    <p>{userName}</p>
+                    <button
+                      onClick={() => handleSelectedAddress(Address)}
+                      className={
+                        selectedAddressId === Address._id
+                          ? styles.selectedButton
+                          : styles.selectButton
+                      }
+                    >
+                      {localAddressId === Address._id ? "Selected" : "Select"}
+                    </button>
+                  </div>
+                  <p>
+                    {Address.fullAddress}, {Address.city}, {Address.state},{" "}
+                    {Address.pinCode}
+                  </p>
+                  <h3>Phone Number: {Address.phoneNumber}</h3>
+                  <div className={styles.editRemoveAddress}>
+                    <p onClick={() => handleEdit(Address._id)}>Edit</p>
+                    <div className={styles.line}></div>
+                    <p onClick={() => handleRemove(Address._id)}>Remove</p>
+                  </div>
+                </div>
+              ))}
+          </div>
+          <EditAddressModal
+            isOpen={isEditPopup}
+            onClose={handleEditPopup}
+            id={id}
+            setIsEditPopup={setIsEditPopup}
+          />
+          <AddressPopup
+            isOpen={isPopupOpen}
+            onClose={handleClosePopup}
+            setIsPopupOpen={setIsPopupOpen}
+          />
         </div>
-        <EditAddressModal
-          isOpen={isEditPopup}
-          onClose={handleEditPopup}
-          id={id}
-          setIsEditPopup={setIsEditPopup}
-        />
-        <AddressPopup
-          isOpen={isPopupOpen}
-          onClose={handleClosePopup}
-          setIsPopupOpen={setIsPopupOpen}
-        />
       </div>
-    </div>
+      <div className={styles.footer}>
+        <Footer />
+      </div>
+    </>
   );
 };
 

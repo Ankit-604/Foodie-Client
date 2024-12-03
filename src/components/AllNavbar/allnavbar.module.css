@@ -1,4 +1,4 @@
-.navbar {
+.navbarMain {
   height: 61px;
   width: 100%;
   display: flex;
@@ -6,21 +6,38 @@
   justify-content: space-between;
   margin-top: 38px;
 }
-.navbarLogo {
+.navbarMainLogo {
   height: 53px;
   width: 215px;
   flex-shrink: 0;
 }
-.navbarLogo > img {
+.navbarMainLogo > img {
   height: 100%;
   width: 100%;
 }
-.page {
+.navbarPage {
   display: flex;
   align-items: center;
   gap: 50px;
 }
-.page > p {
+.navbarPage > p {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 27px;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  flex-shrink: 0;
+}
+.navbarHomePage {
+  width: 127px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 120px;
+  flex-shrink: 0;
+}
+.navbarHomePage > h1 {
   font-size: 15px;
   font-weight: 600;
   line-height: 27px;
@@ -29,16 +46,7 @@
   flex-shrink: 0;
 }
 
-.HomePage > h1 {
-  font-size: 15px;
-  font-weight: 600;
-  line-height: 27px;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-  flex-shrink: 0;
-}
-
-.loginRegister {
+.navbarLoginRegister {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -50,15 +58,15 @@
   border-radius: 120px;
   flex-shrink: 0;
 }
-.userImg {
+.navbarUserImg {
   height: 25px;
   width: 30px;
 }
-.userImg > img {
+.navbarUserImg > img {
   height: 100%;
   width: 100%;
 }
-.loginRegister > h1 {
+.navbarLoginRegister > h1 {
   color: #ffffff;
   font-size: 15px;
   font-weight: 500;
@@ -66,6 +74,105 @@
   text-align: left;
   cursor: pointer;
 }
-.loginRegister > h1 > span {
+.navbarLoginRegister > h1 > span {
   cursor: pointer;
+}
+.navbarCartProfile {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  display: none;
+}
+
+.navbarProfileImage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  height: 100%;
+  width: 50%;
+  background: #fc8a06;
+}
+.navbarAvatar > img {
+  height: 60px;
+  width: 60px;
+}
+.navbarProfileImage > h1 {
+  font-size: 25px;
+  cursor: pointer;
+}
+.navbarProfileImage > h1 > span {
+  font-size: 24px;
+  cursor: pointer;
+}
+.navbarCart {
+  height: 100%;
+  width: 50%;
+  background: #028643;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  cursor: pointer;
+}
+.navbarCart > p {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+@media (max-width: 1280px) {
+  .navbarPage {
+    gap: 30px;
+  }
+  .navbarLoginRegister {
+    width: 170px;
+  }
+  .navbarLoginRegister > h1 {
+    font-size: 13px;
+  }
+}
+@media (max-width: 1200px) {
+  .navbarPage {
+    gap: 20px;
+  }
+  .navbarHomePage {
+    width: 100px;
+  }
+  .navbarMainLogo {
+    width: 180px;
+  }
+}
+@media (max-width: 1100px) {
+  .navbarPage > p {
+    font-size: 13px;
+  }
+  .navbarLoginRegister {
+    width: 150px;
+    gap: 5px;
+  }
+}
+@media (max-width: 1024px) {
+  .navbarPage > p {
+    font-size: 11px;
+  }
+  .navbarHomePage {
+    width: 80px;
+  }
+}
+@media (max-width: 992px) {
+  .navbarMain {
+    height: 100px;
+    margin-top: 0px;
+  }
+  .navbarPage {
+    display: none;
+  }
+  .navbarMainLogo {
+    display: none;
+  }
+  .navbarCartProfile {
+    display: flex;
+  }
 }

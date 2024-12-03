@@ -14,9 +14,12 @@ import orderFood2 from "../../assets/order-food2.png";
 import orderFood3 from "../../assets/order-food3.png";
 import PopularRestaurent from "../../components/PopularRestaurent/PopularRestaurent";
 import Footer from "../../components/Footer/Footer";
+import nextPageBtn from "../../assets/NextpageBtn.png";
+import toast from "react-hot-toast";
 
 const Home = () => {
   const [imageUrl, setImageUrl] = useState([]);
+  const [isCartOpen, setIsCartOpen] = useState(false);
 
   useEffect(() => {
     try {
@@ -26,7 +29,7 @@ const Home = () => {
       };
       getImageUrl();
     } catch (error) {
-      console.error(error);
+      toast.error(error);
     }
   }, []);
   return (
@@ -40,79 +43,90 @@ const Home = () => {
             <h1>Feast Your Senses,</h1>
             <h3>Fast and Fresh</h3>
             <h4>Enter a postcode to see what we deliver</h4>
-            <div className={styles.headerInput}>
+            <div className={styles.headerInputHome}>
               <input type="text" readOnly placeholder="e.g. EC4R 3TE" />
-              <button>Search</button>
+              <button>
+                Search{" "}
+                <img className={styles.nextPageHome} src={nextPageBtn} alt="" />
+              </button>
             </div>
           </div>
-          <div className={styles.headerImage1}>
+          <div className={styles.headerImageOneHome}>
             {imageUrl.map((img, i) => (
-              <img key={i} src={img.data.homeHederImg5} alt="header-image5" />
+              <img key={i} src={img.data.homeHederImg5} alt="header-image" />
             ))}
           </div>
-          <div className={styles.headerImage2}>
+          <div className={styles.headerImageTwoHome}>
             {imageUrl.map((img, i) => (
-              <img key={i} src={img.data.homeHederImg4} alt="header-image4" />
+              <img key={i} src={img.data.homeHederImg4} alt="header-image" />
             ))}
           </div>
-          <div className={styles.headerImage3}>
+          <div className={styles.headerImageThreeHome}>
             {imageUrl.map((img, i) => (
-              <img key={i} src={img.data.homeHederImg2} alt="header-image2" />
+              <img key={i} src={img.data.homeHederImg2} alt="header-image" />
             ))}
           </div>
-          <div className={styles.headerImage4}>
+          <div className={styles.headerImageFourHome}>
             {imageUrl.map((img, i) => (
-              <img key={i} src={img.data.homeHederImg3} alt="header-image3" />
+              <img key={i} src={img.data.homeHederImg3} alt="header-image" />
             ))}
           </div>
-          <div className={styles.headerImage5}>
-            <div className={styles.firstImage}>
+          <div className={styles.headerImageFiveHome}>
+            <div className={styles.firstImageHome}>
               <img src={firstImg} alt="header-image" />
               <h4>We’ve Received your order!</h4>
-              <div className={styles.tracking}>
+              <div className={styles.trackingImgHome}>
                 <img src={Tracking} alt="" />
               </div>
               <h5>Awaiting Restaurant acceptance </h5>
             </div>
           </div>
-          <div className={styles.headerImage6}>
-            <div className={styles.firstImage1}>
+          <div className={styles.headerImageSixHome}>
+            <div className={styles.firstImgOneHome}>
               {imageUrl.map((img, i) => (
-                <img key={i} src={img.data.homeHederImg1} alt="header-image1" />
+                <img key={i} src={img.data.homeHederImg1} alt="header-image" />
               ))}
-              <h4>Order Accepted!✅</h4>
-              <div className={styles.tick}></div>
+              <h4>Order Accepted!</h4>
+              <div className={styles.tickHome}>
+                <img src={TickBox} alt="" />
+              </div>
               <h5>Your order will be delivered shortly</h5>
             </div>
           </div>
         </div>
 
-        <div className={styles.section1}>
-          <div className={styles.section1Header}>
+        <div className={styles.firstSectionHome}>
+          <div className={styles.sectionFirstHeaderHome}>
             <h4>Up to -40% 🎊 Order.uk exclusive deals</h4>
+            <h6>Up to -40% Discount Offers 🎊 </h6>
 
-            <div className={styles.itemList}>
+            <div className={styles.itemListHome}>
               <p>Vegan</p>
               <p>Sushi</p>
-              <div className={styles.pizza}>
+              <div className={styles.pizzaHome}>
+                <img
+                  className={styles.nextPagePart1Home}
+                  src={nextPageBtn}
+                  alt="btn-image"
+                />
                 <h5>Pizza & Fastfood</h5>
               </div>
               <p>others</p>
             </div>
           </div>
 
-          <div className={styles.section1Image}>
-            <div className={styles.section1Image1}>
+          <div className={styles.sectionOneImageHome}>
+            <div className={styles.sectionOneImageOneHome}>
               {imageUrl.map((img, i) => (
                 <img key={i} src={img.data.homeSection1Img1} alt="image" />
               ))}
             </div>
-            <div className={styles.section1Image1}>
+            <div className={styles.sectionOneImageOneHome}>
               {imageUrl.map((img, i) => (
                 <img key={i} src={img.data.homeSection1Img2} alt="image" />
               ))}
             </div>
-            <div className={styles.section1Image1}>
+            <div className={styles.sectionOneImageOneHome}>
               {imageUrl.map((img, i) => (
                 <img key={i} src={img.data.homeSection1Img3} alt="image" />
               ))}
@@ -120,79 +134,79 @@ const Home = () => {
           </div>
         </div>
 
-        <div className={styles.section2}>
-          <div className={styles.section2Header}>
+        <div className={styles.secondSectionHome}>
+          <div className={styles.secondSectionHeaderHome}>
             <h4>Order.uk Popular Categories 🤩</h4>
           </div>
 
-          <div className={styles.section2Image}>
-            <div className={styles.section2Div1}>
-              <div className={styles.section2Image1}>
+          <div className={styles.secondSectionImageHome}>
+            <div className={styles.section2Image}>
+              <div className={styles.secondSectionImageOneHome}>
                 {imageUrl.map((img, i) => (
                   <img key={i} src={img.data.homeSection2Img1} alt="image" />
                 ))}
               </div>
-              <div className={styles.cards}>
+              <div className={styles.cardsHome}>
                 <h3>Burgers & Fast food</h3>
                 <h4>21 Restaurants</h4>
               </div>
             </div>
 
-            <div className={styles.section2Div1}>
-              <div className={styles.section2Image1}>
+            <div className={styles.sectionTwoDivOneHome}>
+              <div className={styles.secondSectionImageOneHome}>
                 {imageUrl.map((img, i) => (
                   <img key={i} src={img.data.homeSection2Img2} alt="image" />
                 ))}
               </div>
-              <div className={styles.cards}>
+              <div className={styles.cardsHome}>
                 <h3>Salads</h3>
                 <h4>32 Restaurants</h4>
               </div>
             </div>
 
-            <div className={styles.section2Div1}>
-              <div className={styles.section2Image1}>
+            <div className={styles.sectionTwoDivOneHome}>
+              <div className={styles.secondSectionImageOneHome}>
                 {imageUrl.map((img, i) => (
                   <img key={i} src={img.data.homeSection2Img3} alt="image" />
                 ))}
               </div>
-              <div className={styles.cards}>
+              <div className={styles.cardsHome}>
                 <h3>Pasta & Casuals</h3>
                 <h4>4 Restaurants</h4>
               </div>
             </div>
 
-            <div className={styles.section2Div1}>
-              <div className={styles.section2Image1}>
+            <div className={styles.sectionTwoDivOneHome}>
+              <div className={styles.secondSectionImageOneHome}>
                 {imageUrl.map((img, i) => (
                   <img key={i} src={img.data.homeSection2Img4} alt="image" />
                 ))}
               </div>
-              <div className={styles.cards}>
+              <div className={styles.cardsHome}>
                 <h3>Pizza</h3>
                 <h4>32 Restaurants</h4>
               </div>
             </div>
 
-            <div className={styles.section2Div1}>
-              <div className={styles.section2Image1}>
+            <div className={styles.sectionTwoDivOneHome}>
+              <div className={styles.secondSectionImageOneHome}>
                 {imageUrl.map((img, i) => (
                   <img key={i} src={img.data.homeSection2Img5} alt="image" />
                 ))}
               </div>
-              <div className={styles.cards}>
+              <div className={styles.cardsHome}>
                 <h3>Breakfast</h3>
                 <h4>4 Restaurants</h4>
               </div>
             </div>
 
-            <div className={styles.section2Div1}>
-              <div className={styles.section2Image1}>
+            <div className={styles.sectionTwoDivOneHome}>
+              <div className={styles.secondSectionImageOneHome}>
                 {imageUrl.map((img, i) => (
                   <img key={i} src={img.data.homeSection2Img6} alt="image" />
                 ))}
               </div>
-              <div className={styles.cards}>
+              <div className={styles.cardsHome}>
                 <h3>Soups</h3>
                 <h4>4 Restaurants</h4>
               </div>
@@ -201,60 +215,60 @@ const Home = () => {
         </div>
         <PopularRestaurent />
 
-        <div className={styles.Personalised}>
-          <div className={styles.itemWrapper}>
-            <div className={styles.orderingImg}>
+        <div className={styles.PersonalizedHome}>
+          <div className={styles.itemSectionsHome}>
+            <div className={styles.orderingImageHome}>
               <img src={orderLogo} alt="image" />
               <p>ing</p>
               <h4>is more </h4>
             </div>
-            <div className={styles.instant}>
+            <div className={styles.instantPartHome}>
               <h3>
                 <span>Personalised</span> & Instant
               </h3>
             </div>
             <h4>Download the Order.uk app for faster ordering</h4>
-            <div className={styles.storeLogo}>
-              <div className={styles.appStore}>
+            <div className={styles.storeLogoHome}>
+              <div className={styles.appStoreLogoHome}>
                 <img src={AppLogo} alt="image" />
               </div>
-              <div className={styles.playStore}>
+              <div className={styles.playStoreLogoHome}>
                 <img src={playStoreLogo} alt="image" />
               </div>
             </div>
           </div>
-          <div className={styles.PersonalisedImg}>
+          <div className={styles.PersonalizedImageHome}>
             {imageUrl.map((img, i) => (
               <img key={i} src={img.data.homefooterImg1} alt="image" />
             ))}
           </div>
         </div>
-        <div className={styles.getStarted}>
-          <div className={styles.partner}>
+        <div className={styles.getStartedPartHome}>
+          <div className={styles.partnerPartHome}>
             {imageUrl.map((img, i) => (
               <img key={i} src={img.data.homefooterImg2} alt="image" />
             ))}
-            <div className={styles.earn}>
+            <div className={styles.earnPartHome}>
               <h3>Earn more with lower fees</h3>
             </div>
-            <div className={styles.business}>
+            <div className={styles.businessPartHome}>
               <h3>Signup as a business</h3>
               <h4>Partner with us</h4>
               <button>Get Started</button>
             </div>
           </div>
-          <div className={styles.rideWithUs}>
+          <div className={styles.rideWithUsPartHome}>
             {imageUrl.map((img, i) => (
               <img key={i} src={img.data.homefooterImg3} alt="image" />
             ))}
           </div>
         </div>
 
-        <div className={styles.aboutUs}>
-          <div className={styles.navItems}>
+        <div className={styles.aboutUsPartHome}>
+          <div className={styles.navItemsHome}>
             <h2>Know more about us!</h2>
-            <div className={styles.navList}>
-              <div className={styles.question}>
+            <div className={styles.navListHome}>
+              <div className={styles.questionsPartHome}>
                 <h3>Frequent Questions</h3>
               </div>
               <p>Who we are?</p>
@@ -262,39 +276,39 @@ const Home = () => {
               <p>Help & Support</p>
             </div>
           </div>
-          <div className={styles.info}>
-            <div className={styles.infoList}>
-              <div className={styles.work}>
-                <p>How does Order.UK work?</p>
+          <div className={styles.informationsPartHome}>
+            <div className={styles.infoListPartHome}>
+              <div className={styles.workPartHome}>
+                <p>How does Order.UK workPartHome?</p>
               </div>
               <p>What payment methods are accepted?</p>
               <p>Can I track my order in real-time?</p>
-              <div className={styles.promotion}>
+              <div className={styles.promotionPartHome}>
                 <p>Are there any special discounts or </p>
                 <p>promotions available?</p>
               </div>
               <p>Is Order.UK available in my area?</p>
             </div>
 
-            <div className={styles.aboutOrder}>
-              <div className={styles.aboutCards}>
-                <div className={styles.aboutOrderLogo}>
+            <div className={styles.aboutOrderPartHome}>
+              <div className={styles.aboutCardsPartHome}>
+                <div className={styles.aboutOrderLogoHome}>
                   <h3>Place an Order!</h3>
-                  <div className={styles.orderImage}>
+                  <div className={styles.orderImageHome}>
                     <img src={orderFood1} alt="image" />
                   </div>
                   <h4>Place order through our website or Mobile app</h4>
                 </div>
-                <div className={styles.aboutOrderLogo}>
+                <div className={styles.aboutOrderLogoHome}>
                   <h3>Track Progress</h3>
-                  <div className={styles.orderImage}>
+                  <div className={styles.orderImageHome}>
                     <img src={orderFood2} alt="image" />
                   </div>
                   <h4>Your can track your order status with delivery time</h4>
                 </div>
-                <div className={styles.aboutOrderLogo}>
+                <div className={styles.aboutOrderLogoHome}>
                   <h3>Get your Order!</h3>
-                  <div className={styles.orderImage}>
+                  <div className={styles.orderImageHome}>
                     <img src={orderFood3} alt="image" />
                   </div>
                   <h4>Receive your order at a lighting fast speed!</h4>
@@ -310,29 +324,29 @@ const Home = () => {
           </div>
         </div>
 
-        <div className={styles.history}>
-          <div className={styles.historyText}>
+        <div className={styles.historyPartHome}>
+          <div className={styles.historyTextPartHome}>
             <p>546+</p>
             <h3>Registered Riders</h3>
           </div>
           <div className={styles.line}></div>
-          <div className={styles.historyText}>
+          <div className={styles.historyTextPartHome}>
             <p>789,900+</p>
             <h3>Orders Delivered</h3>
           </div>
           <div className={styles.line}></div>
-          <div className={styles.historyText}>
+          <div className={styles.historyTextPartHome}>
             <p>690+</p>
             <h3>Restaurants Partnered</h3>
           </div>
           <div className={styles.line}></div>
-          <div className={styles.historyText}>
+          <div className={styles.historyTextPartHome}>
             <p>17,457+</p>
             <h3>Food items</h3>
           </div>
         </div>
       </div>
-      <div className={styles.footer}>
+      <div className={styles.footerHome}>
         <Footer />
       </div>
     </>

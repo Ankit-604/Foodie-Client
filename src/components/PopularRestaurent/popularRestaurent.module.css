@@ -1,10 +1,9 @@
-
-.popularRestaaurent {
+.popularRestaurantMain {
   height: 365px;
   width: 100%;
   margin-top: 40px;
 }
-.popularRestaaurentHeader {
+.popularRestaurantSection {
   display: flex;
   align-items: center;
   height: 60px;
@@ -12,7 +11,7 @@
   padding: 0 20px;
   flex-shrink: 0;
 }
-.popularRestaaurentHeader > h4 {
+.popularRestaurantSection > h4 {
   color: #000000;
   font-size: 26px;
   font-weight: 800;
@@ -22,41 +21,100 @@
   text-decoration-skip-ink: none;
   flex-shrink: 0;
 }
-.popularRestaaurentImage{
+.RestaurantImage {
   display: flex;
   gap: 20px;
 }
-.popularRestaaurentDiv1 {
+.popularRestaurantDiv1 {
   height: 250px;
-  width: 212.5px;
-  background: #FC8A06;
+  width: 15.4%;
+  background: #fc8a06;
   border-radius: 12px;
   flex-shrink: 0;
   margin-top: 30px;
   cursor: pointer;
+  overflow: hidden;
 }
-.popularRestaaurentImage1 {
+.RestaurantImageMain {
   height: 183px;
   width: 100%;
 }
-.popularRestaaurentImage1 > img {
+.RestaurantImageMain > img {
   height: 100%;
   width: 100%;
   cursor: pointer;
+  object-fit: cover;
 }
-.RestaurentCards{
+.restaurantBoxes {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 20px;
 }
-.RestaurentCards > h3 {
+.restaurantBoxes > h3 {
   color: #ffffff;
   font-size: 16px;
   font-weight: 700;
   line-height: 27px;
   text-align: center;
   text-underline-position: from-font;
-  text-decoration-skip-ink: none;  
+  text-decoration-skip-ink: none;
   flex-shrink: 0;
+}
+
+@media (max-width: 1200px) {
+  .popularRestaurantDiv1 {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+  }
+  .RestaurantImageMain {
+    height: 200px;
+    gap: 5px;
+  }
+  .RestaurantImageMain > img {
+    object-fit: fill;
+  }
+  .restaurantBoxes {
+    margin: 10px 10px;
+  }
+  .restaurantBoxes > h3 {
+    font-size: 14px;
+  }
+  .RestaurantImage {
+    gap: 15px;
+  }
+}
+@media (max-width: 1200px) {
+  .popularRestaurantDiv1 {
+    height: 170px;
+    display: flex;
+    flex-direction: column;
+  }
+  .RestaurantImageMain {
+    height: 200px;
+    gap: 3px;
+    overflow-y: hidden;
+  }
+  .restaurantBoxes > h3 {
+    font-size: 12px;
+  }
+  .popularRestaurantMain {
+    height: 280px;
+  }
+}
+@media (max-width: 992px) {
+  .popularRestaurantDiv1 {
+    width: 140px;
+  }
+  .popularRestaurantMain {
+    margin-left: 30px;
+    width: 92%;
+  }
+  .RestaurantImage {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    overflow-y: hidden;
+    scrollbar-width: thin;
+  }
 }

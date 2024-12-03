@@ -15,7 +15,7 @@ const Burgers = ({ onCartUpdate }) => {
         const response = await getFoodItem();
         setCards(response.cards);
       } catch (error) {
-        toast.error(response.message);
+        toast.error(error.message);
       }
     };
     getCards();
@@ -48,20 +48,20 @@ const Burgers = ({ onCartUpdate }) => {
   const FriesCards = cards.filter((card) => card.name === "Fries");
   const ColdDrinkCards = cards.filter((card) => card.name === "Cold Drinks");
   return (
-    <div className={styles.foodItem}>
+    <div className={styles.foodItemBurger}>
       {BurgerCards.length > 0 ? (
-        <div className={styles.burger}>
+        <div className={styles.burgerMain}>
           <h2>Burgers</h2>
-          <div className={styles.cardWrapper}>
+          <div className={styles.burgerCardWrapper}>
             {BurgerCards.map((burgerCard) => (
               <div className={styles.burgerCard} key={burgerCard._id}>
-                <div className={styles.cardDetails}>
+                <div className={styles.cardDetailsBurger}>
                   <h3>{burgerCard.title}</h3>
                   <h4>{burgerCard.description}</h4>
-                  <h5>{burgerCard.price}</h5>
+                  <h5> ₹ {burgerCard.price}</h5>
                 </div>
                 <div className={styles.burgerCardImg}>
-                  <div className={styles.mainImg}>
+                  <div className={styles.mainImageBurger}>
                     <img src={burgerCard.mainImage} alt={burgerCard.title} />
                   </div>
                   <div className={styles.addBg}>
@@ -81,23 +81,23 @@ const Burgers = ({ onCartUpdate }) => {
         </div>
       ) : (
         <div className={styles.notAvailable}>
-          <p>No items available at the moment.</p>
+          <p>No burgers are available at the moment.</p>
         </div>
       )}
 
       {FriesCards.length > 0 ? (
-        <div className={styles.burger}>
+        <div className={styles.burgerMain}>
           <h2 className={styles.fries}>Fries</h2>
-          <div className={styles.cardWrapper}>
+          <div className={styles.burgerCardWrapper}>
             {FriesCards.map((friesCard) => (
               <div className={styles.burgerCard} key={friesCard._id}>
-                <div className={styles.cardDetails}>
+                <div className={styles.cardDetailsBurger}>
                   <h3>{friesCard.title}</h3>
                   <h4>{friesCard.description}</h4>
-                  <h5>{friesCard.price}</h5>
+                  <h5> ₹ {friesCard.price}</h5>
                 </div>
                 <div className={styles.burgerCardImg}>
-                  <div className={styles.mainImg}>
+                  <div className={styles.mainImageBurger}>
                     <img src={friesCard.mainImage} alt={friesCard.title} />
                   </div>
                   <div className={styles.addBg}>
@@ -117,23 +117,23 @@ const Burgers = ({ onCartUpdate }) => {
         </div>
       ) : (
         <div className={styles.notAvailable}>
-          <p>No items available at the moment.</p>
+          <p>No fries are available at the moment.</p>
         </div>
       )}
 
       {ColdDrinkCards.length > 0 ? (
-        <div className={styles.burger}>
+        <div className={styles.burgerMain}>
           <h2 className={styles.fries}>Cold Drinks</h2>
-          <div className={styles.cardWrapper}>
+          <div className={styles.burgerCardWrapper}>
             {ColdDrinkCards.map((coldDrinkCard) => (
               <div className={styles.burgerCard} key={coldDrinkCard._id}>
-                <div className={styles.cardDetails}>
+                <div className={styles.cardDetailsBurger}>
                   <h3>{coldDrinkCard.title}</h3>
                   <h4>{coldDrinkCard.description}</h4>
-                  <h5>{coldDrinkCard.price}</h5>
+                  <h5> ₹ {coldDrinkCard.price}</h5>
                 </div>
                 <div className={styles.burgerCardImg}>
-                  <div className={styles.mainImg}>
+                  <div className={styles.mainImageBurger}>
                     <img
                       src={coldDrinkCard.mainImage}
                       alt={coldDrinkCard.title}
@@ -156,7 +156,7 @@ const Burgers = ({ onCartUpdate }) => {
         </div>
       ) : (
         <div className={styles.notAvailable}>
-          <p>No items available at the moment.</p>
+          <p>No cold drinks are available at the moment.</p>
         </div>
       )}
     </div>

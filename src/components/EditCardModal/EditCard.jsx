@@ -68,7 +68,6 @@ const EditCard = ({ isEditCard, onCloseCard, setIsEditCard, cardId }) => {
       }
     } catch (error) {
       toast.error(error.message);
-      console.log(error.message);
     } finally {
       setLoading(false);
       setIsEditCard(false);
@@ -78,8 +77,11 @@ const EditCard = ({ isEditCard, onCloseCard, setIsEditCard, cardId }) => {
   if (!isEditCard) return null;
 
   return (
-    <div className={styles.overlay} onClick={onCloseCard}>
-      <div className={styles.container} onClick={(e) => e.stopPropagation()}>
+    <div className={styles.mainEditPaymentCard} onClick={onCloseCard}>
+      <div
+        className={styles.containerEditPaymentCard}
+        onClick={(e) => e.stopPropagation()}
+      >
         <h2>Edit Payment Method</h2>
         <form onSubmit={handleSubmit}>
           <label>
@@ -126,11 +128,11 @@ const EditCard = ({ isEditCard, onCloseCard, setIsEditCard, cardId }) => {
               }
             />
           </label>
-          <div className={styles.actions}>
-            <div className={styles.cancelSaveButton}>
+          <div className={styles.actionsEditPaymentCard}>
+            <div className={styles.buttonEditPaymentCard}>
               <button
                 type="button"
-                className={styles.cancelButton}
+                className={styles.cancelBtnEditPaymentCard}
                 onClick={onCloseCard}
               >
                 Cancel
@@ -139,7 +141,7 @@ const EditCard = ({ isEditCard, onCloseCard, setIsEditCard, cardId }) => {
               <button
                 type="submit"
                 disabled={loading}
-                className={styles.saveButton}
+                className={styles.saveBtnEditPaymentCard}
               >
                 {loading ? "Loading" : "Save Changes"}
               </button>
@@ -147,7 +149,7 @@ const EditCard = ({ isEditCard, onCloseCard, setIsEditCard, cardId }) => {
           </div>
         </form>
         <button
-          className={styles.removeButton}
+          className={styles.removeBtnEditPaymentCard}
           disabled={loading}
           onClick={(e) => {
             e.preventDefault();

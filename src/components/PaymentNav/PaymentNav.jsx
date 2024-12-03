@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./navbar.module.css";
+import styles from "./paymentnav.module.css";
 import navbarImage from "../../assets/LOGO.png";
 import userImage from "../../assets/User.png";
 import { useNavigate } from "react-router-dom";
@@ -7,8 +7,9 @@ import { useAuth } from "../Context/AuthContext";
 import basketImg from "../../assets/Basket.png";
 import avatarImg from "../../assets/avatar.png";
 import locationImage from "../../assets/Location.png";
+import toast from "react-hot-toast";
 
-const NavBar = ({ setIsCartOpen }) => {
+const PaymentNav = ({ setIsCartOpen }) => {
   const navigate = useNavigate();
   const { isLoggedIn, userName, handleCart } = useAuth();
   const id = localStorage.getItem("userId");
@@ -30,28 +31,34 @@ const NavBar = ({ setIsCartOpen }) => {
     });
   };
   const handleOpenCart = () => {
+    if (!localStorage.getItem("token")) {
+      toast.error("Please log in to continue.");
+      return;
+    }
     handleCart();
     navigate("/product");
+    setIsCartOpen(true);
     setIsCartOpen(true);
     handleScrollToTop();
   };
   const displayName = userName ? `${userName.slice(0, 8)}...` : null;
   return (
     <>
-      <div className={styles.navbarMain}>
-        <div className={styles.navbarMainLogo}>
-          <img src={navbarImage} alt="navbarMain-image" />
+      <div className={styles.navbarPayment}>
+        <div className={styles.navbarLogoPayment}>
+          <img src={navbarImage} alt="navbar-image" />
         </div>
-        <div className={styles.pageNavBar}>
-          <div className={styles.homePageNavBar}>
-            <h1>Home</h1>
-          </div>
+        <div className={styles.pagePayment}>
+          <p>Home</p>
+
           <p>Browse Menu</p>
           <p>Special Offers</p>
-          <p>Restaurants</p>
+          <div className={styles.homePagePayment}>
+            <h1>Restaurants</h1>
+          </div>
           <p>Track Order</p>
-          <div className={styles.NavBarLoginRegister}>
-            <div className={styles.userImg}>
+          <div className={styles.loginRegisterPaymentNav}>
+            <div className={styles.userImgPaymentNav}>
               <img src={userImage} alt="user-image" />
             </div>
             {isLoggedIn ? (
@@ -65,9 +72,9 @@ const NavBar = ({ setIsCartOpen }) => {
           </div>
         </div>
 
-        <div className={styles.NavBarCartProfile}>
-          <div className={styles.NavBarProfileImage}>
-            <div className={styles.avatarNavBar}>
+        <div className={styles.cartProfilePaymentNav}>
+          <div className={styles.profileImagePaymentNav}>
+            <div className={styles.avatarPaymentNav}>
               <img src={avatarImg} alt="avatar-image" />
             </div>
             {isLoggedIn ? (
@@ -79,13 +86,13 @@ const NavBar = ({ setIsCartOpen }) => {
               </h1>
             )}
           </div>
-          <div className={styles.cartNavbar} onClick={handleOpenCart}>
+          <div className={styles.cartPaymentNav} onClick={handleOpenCart}>
             <img src={basketImg} alt="basket-image" />
             <p>My Cart</p>
           </div>
         </div>
       </div>
-      <div className={styles.addressNavBar}>
+      <div className={styles.addressPaymentNav}>
         {localAddress && (
           <>
             <img src={locationImage} alt="locationImage" />
@@ -102,4 +109,4 @@ const NavBar = ({ setIsCartOpen }) => {
   );
 };
 
-export default NavBar;
+export default PaymentNav;

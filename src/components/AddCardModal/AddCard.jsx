@@ -12,18 +12,8 @@ const AddCard = ({ isOpen, onClose, cardName, setPopupOpen }) => {
     cardName: "",
   });
 
-  useEffect(() => {
-    if (cardName) {
-      setFormData((prevData) => ({
-        ...prevData,
-        cardName: cardName,
-      }));
-    }
-  }, [cardName]);
-
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData);
 
     const { cardNumber, expire, cvc, cardName } = formData;
     if (!cardNumber || !expire || !cvc || !cardName) {
@@ -70,7 +60,7 @@ const AddCard = ({ isOpen, onClose, cardName, setPopupOpen }) => {
   return (
     <div className={styles.overlay} onClick={onClose}>
       <div className={styles.container} onClick={(e) => e.stopPropagation()}>
-        <h2>Edit Payment Method</h2>
+        <h2>Add Payment Method</h2>
         <form onSubmit={handleSubmit}>
           <label>
             Card Number
@@ -109,7 +99,7 @@ const AddCard = ({ isOpen, onClose, cardName, setPopupOpen }) => {
             Name on Card
             <input
               type="text"
-              placeholder="Your Name"
+              placeholder="Your Card Name"
               value={formData.cardName}
               onChange={(e) =>
                 setFormData({ ...formData, cardName: e.target.value })
@@ -124,15 +114,14 @@ const AddCard = ({ isOpen, onClose, cardName, setPopupOpen }) => {
             >
               Cancel
             </button>
-            <div className={styles.cancelSaveButton}>
-              <button
-                type="submit"
-                disabled={loading}
-                className={styles.saveButton}
-              >
-                {loading ? "Loading" : "Save Changes"}
-              </button>
-            </div>
+
+            <button
+              type="submit"
+              disabled={loading}
+              className={styles.saveButton}
+            >
+              {loading ? "Loading" : "Save Changes"}
+            </button>
           </div>
         </form>
       </div>

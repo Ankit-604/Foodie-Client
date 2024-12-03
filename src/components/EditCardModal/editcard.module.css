@@ -1,4 +1,4 @@
-.overlay {
+.mainEditPaymentCard {
   position: fixed;
   top: 0;
   left: 0;
@@ -11,7 +11,7 @@
   z-index: 1000;
 }
 
-.container {
+.containerEditPaymentCard {
   background: white;
   border-radius: 8px;
   width: 50%;
@@ -20,19 +20,19 @@
   text-align: center;
 }
 
-.container h2 {
+.containerEditPaymentCard h2 {
   font-size: 1.5rem;
   text-align: left;
   padding: 0 30px;
   padding-top: 20px;
 }
 
-.container form {
+.containerEditPaymentCard form {
   display: grid;
   gap: 15px;
 }
 
-.container label {
+.containerEditPaymentCard label {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -40,11 +40,11 @@
   font-weight: 400;
   line-height: 36px;
   text-align: left;
-  gap: 30px;
+  /* gap: 30px; */
   padding: 0 30px;
 }
 
-.container input {
+.containerEditPaymentCard input {
   padding: 8px;
   font-size: 1rem;
   border: 1px solid #ccc;
@@ -53,7 +53,7 @@
   padding: 0 30px;
 }
 
-.actions {
+.actionsEditPaymentCard {
   display: flex;
   justify-content: end;
   align-items: center;
@@ -65,7 +65,7 @@
   position: relative;
 }
 
-.removeButton {
+.removeBtnEditPaymentCard {
   position: absolute;
   background: #bf4c4c;
   color: white;
@@ -80,7 +80,7 @@
   bottom: 25px;
 }
 
-.cancelButton {
+.cancelBtnEditPaymentCard {
   background: none;
   color: #ffffff;
   border: none;
@@ -91,7 +91,7 @@
   cursor: pointer;
 }
 
-.saveButton {
+.saveBtnEditPaymentCard {
   background: #ffffff;
   color: #000000;
   border: none;
@@ -102,7 +102,110 @@
   width: 150px;
 }
 
-.cancelSaveButton {
+.buttonEditPaymentCard {
   display: flex;
   gap: 5px;
+}
+@media (max-width: 1280px) {
+  .containerEditPaymentCard input {
+    width: 65%;
+  }
+}
+@media (max-width: 992px) {
+  .containerEditPaymentCard label {
+    font-size: 17px;
+  }
+  .containerEditPaymentCard {
+    width: 60%;
+  }
+}
+@media (max-width: 768px) {
+  .mainEditPaymentCard {
+    align-items: start;
+  }
+  .containerEditPaymentCard {
+    height: 350px;
+    width: 70%;
+    margin-top: 70px;
+  }
+}
+@media (max-width: 768px) {
+  .mainEditPaymentCard {
+    align-items: start;
+  }
+  .containerEditPaymentCard {
+    height: 350px;
+    width: 70%;
+    margin-top: 70px;
+  }
+  .containerEditPaymentCard > h2 {
+    padding-top: 10px;
+  }
+  form {
+    margin-top: 10px;
+  }
+  .removeBtnEditPaymentCard {
+    bottom: 0;
+  }
+}
+@media (max-width: 600px) {
+  .containerEditPaymentCard label {
+    font-size: 15px;
+  }
+  .containerEditPaymentCard input {
+    width: 55%;
+    height: 30px;
+  }
+  .containerEditPaymentCard h2 {
+    font-size: 1rem;
+  }
+  /* .cancelBtnEditPaymentCard{
+    display: none;
+  } */
+  .actionsEditPaymentCard {
+    margin-top: 5px;
+    background: none;
+    justify-content: start;
+    gap: 10px;
+  }
+  .buttonEditPaymentCard {
+    width: 100%;
+    justify-content: end;
+  }
+  .saveBtnEditPaymentCard {
+    background: #fc8a06;
+    width: 50%;
+    color: #ffffff;
+  }
+  .removeBtnEditPaymentCard {
+    width: 42%;
+  }
+  .containerEditPaymentCard {
+    height: auto;
+  }
+  .removeBtnEditPaymentCard {
+    bottom: 25px;
+  }
+}
+
+@media (max-width: 450px) {
+  .containerEditPaymentCard label {
+    font-size: 13px;
+  }
+  .containerEditPaymentCard input {
+    width: 60%;
+    font-size: 0.7rem;
+  }
+  .containerEditPaymentCard h2 {
+    font-size: 1rem;
+  }
+  .containerEditPaymentCard form {
+    gap: 5px;
+  }
+  .actionsEditPaymentCard {
+    margin-top: 0;
+  }
+  .containerEditPaymentCard {
+    width: 90%;
+  }
 }

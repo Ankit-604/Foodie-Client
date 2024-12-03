@@ -53,13 +53,13 @@
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
 }
-.headerInput {
+.headerInputHome {
   display: flex;
   position: relative;
   height: auto;
   width: 80%;
 }
-.headerInput > input {
+.headerInputHome > input {
   height: 57px;
   width: 75%;
   border: 1px solid #00000066;
@@ -74,7 +74,7 @@
   text-decoration-skip-ink: none;
   outline: none;
 }
-.headerInput > button {
+.headerInputHome > button {
   position: absolute;
   height: 57px;
   width: 188px;
@@ -83,7 +83,7 @@
   border-radius: 120px;
   border: none;
 }
-.headerImage1 {
+.headerImageOneHome {
   position: absolute;
   height: 537px;
   width: 805px;
@@ -91,11 +91,11 @@
   right: 300px;
   z-index: 6;
 }
-.headerImage1 > img {
+.headerImageOneHome > img {
   height: 100%;
   width: 100%;
 }
-.headerImage2 {
+.headerImageTwoHome {
   position: absolute;
   height: 455px;
   width: 337px;
@@ -103,11 +103,11 @@
   right: 255px;
   z-index: 5;
 }
-.headerImage2 > img {
+.headerImageTwoHome > img {
   height: 100%;
   width: 100%;
 }
-.headerImage3 {
+.headerImageThreeHome {
   position: absolute;
   height: 565px;
   width: 565px;
@@ -115,11 +115,11 @@
   bottom: 0;
   z-index: 4;
 }
-.headerImage3 > img {
+.headerImageThreeHome > img {
   height: 100%;
   width: 100%;
 }
-.headerImage4 {
+.headerImageFourHome {
   position: absolute;
   height: 183px;
   width: 390px;
@@ -127,11 +127,11 @@
   right: 22px;
   top: 388px;
 }
-.headerImage4 > img {
+.headerImageFourHome > img {
   height: 100%;
   width: 100%;
 }
-.headerImage5 {
+.headerImageFiveHome {
   position: absolute;
   height: 183px;
   width: 390px;
@@ -139,14 +139,14 @@
   right: 50px;
   top: 50px;
 }
-.firstImage {
+.firstImageHome {
   position: relative;
 }
-.firstImage > img {
+.firstImageHome > img {
   height: 100%;
   width: 100%;
 }
-.firstImage > h4 {
+.firstImageHome > h4 {
   position: absolute;
   top: 113px;
   left: 34px;
@@ -156,7 +156,7 @@
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
 }
-.firstImage > h5 {
+.firstImageHome > h5 {
   position: absolute;
   top: 134px;
   left: 34px;
@@ -167,7 +167,7 @@
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
 }
-.tracking {
+.trackingImgHome {
   position: absolute;
   height: 12px;
   width: 12px;
@@ -175,7 +175,7 @@
   left: 223px;
   z-index: 10;
 }
-.headerImage6 {
+.headerImageSixHome {
   position: absolute;
   height: 183px;
   width: 390px;
@@ -183,14 +183,14 @@
   right: -10px;
   top: 196px;
 }
-.firstImage {
+.firstImageHome {
   position: relative;
 }
-.firstImage1 > img {
+.firstImgOneHome > img {
   height: 100%;
   width: 100%;
 }
-.firstImage1 > h4 {
+.firstImgOneHome > h4 {
   position: absolute;
   top: 113px;
   left: 34px;
@@ -200,7 +200,7 @@
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
 }
-.firstImage1 > h5 {
+.firstImgOneHome > h5 {
   position: absolute;
   top: 134px;
   left: 34px;
@@ -211,19 +211,19 @@
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
 }
-.tick {
+.tickHome {
   position: absolute;
   height: 17px;
   width: 17px;
   top: 113px;
   left: 174px;
 }
-.section1 {
+.firstSectionHome {
   height: 400px;
   width: 100%;
   margin-top: 40px;
 }
-.section1Header {
+.sectionFirstHeaderHome {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -232,7 +232,7 @@
   padding: 0 20px;
   flex-shrink: 0;
 }
-.section1Header > h4 {
+.sectionFirstHeaderHome > h4 {
   font-size: 26px;
   font-weight: 700;
   line-height: 48px;
@@ -240,12 +240,15 @@
   text-decoration-skip-ink: none;
   flex-shrink: 0;
 }
-.itemList {
+.sectionFirstHeaderHome > h6 {
+  display: none;
+}
+.itemListHome {
   display: flex;
   gap: 80px;
   align-items: center;
 }
-.itemList > p {
+.itemListHome > p {
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
@@ -254,7 +257,7 @@
   text-decoration-skip-ink: none;
   flex-shrink: 0;
 }
-.pizza {
+.pizzaHome {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -270,7 +273,7 @@
   border-radius: 120px;
   flex-shrink: 0;
 }
-.section1Image {
+.sectionOneImageHome {
   height: 280px;
   width: 100%;
   display: flex;
@@ -278,23 +281,23 @@
   margin-top: 40px;
   flex-shrink: 0;
 }
-.section1Image1 {
+.sectionOneImageOneHome {
   height: 100%;
   width: 32.4%;
   flex-shrink: 0;
 }
-.section1Image1 > img {
+.sectionOneImageOneHome > img {
   height: 100%;
   width: 100%;
   flex-shrink: 0;
 }
 
-.section2 {
+.secondSectionHome {
   height: 365px;
   width: 100%;
   margin-top: 40px;
 }
-.section2Header {
+.secondSectionHeaderHome {
   display: flex;
   align-items: center;
   height: 60px;
@@ -302,7 +305,7 @@
   padding: 0 20px;
   flex-shrink: 0;
 }
-.section2Header > h4 {
+.secondSectionHeaderHome > h4 {
   color: #000000;
   font-size: 26px;
   font-weight: 800;
@@ -312,28 +315,31 @@
   text-decoration-skip-ink: none;
   flex-shrink: 0;
 }
-.section2Image {
+.secondSectionImageHome {
   display: flex;
   gap: 20px;
+  flex-shrink: 0;
 }
-.section2Div1 {
+.sectionTwoDivOneHome {
   height: 250px;
-  width: 212.5px;
+  width: 15.4%;
   border: 1px solid #0000001a;
   background: #f5f5f5;
   border-radius: 12px;
   flex-shrink: 0;
   margin-top: 30px;
+  overflow: hidden;
 }
-.section2Image1 {
+.secondSectionImageOneHome {
   height: 183px;
   width: 100%;
 }
-.section2Image1 > img {
+.secondSectionImageOneHome > img {
   height: 100%;
   width: 100%;
+  object-fit: cover;
 }
-.cards {
+.cardsHome {
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -341,7 +347,7 @@
   margin-top: 10px;
   margin-left: 20px;
 }
-.cards > h3 {
+.cardsHome > h3 {
   font-size: 18px;
   font-weight: 700;
   line-height: 27px;
@@ -350,7 +356,7 @@
   text-decoration-skip-ink: none;
   flex-shrink: 0;
 }
-.cards > h4 {
+.cardsHome > h4 {
   color: #fc8a06;
   font-size: 13px;
   font-weight: 400;
@@ -360,12 +366,12 @@
   text-decoration-skip-ink: none;
   flex-shrink: 0;
 }
-.Personalised {
+.PersonalizedHome {
   height: 561px;
   width: 100%;
   position: relative;
 }
-.itemWrapper {
+.itemSectionsHome {
   position: absolute;
   height: 511px;
   width: 100%;
@@ -379,7 +385,7 @@
   padding-right: 50px;
   background: linear-gradient(180deg, #eeeeee 0%, #e0e1dc 100%);
 }
-.orderingImg {
+.orderingImageHome {
   display: flex;
   align-items: center;
   height: 61px;
@@ -387,7 +393,7 @@
   flex-shrink: 0;
   margin-right: 120px;
 }
-.orderingImg > p {
+.orderingImageHome > p {
   font-size: 68px;
   font-weight: 700;
   letter-spacing: -0.06em;
@@ -396,7 +402,7 @@
   text-decoration-skip-ink: none;
   flex-shrink: 0;
 }
-.orderingImg > h4 {
+.orderingImageHome > h4 {
   font-size: 68px;
   font-weight: 700;
   line-height: 102px;
@@ -407,12 +413,12 @@
   margin-left: 30px;
   flex-shrink: 0;
 }
-.orderingImg > img {
+.orderingImageHome > img {
   height: 100%;
   width: 50%;
   flex-shrink: 0;
 }
-.instant {
+.instantPartHome {
   height: 70px;
   width: 60%;
   background: #03081f;
@@ -423,7 +429,7 @@
   justify-content: end;
   flex-shrink: 0;
 }
-.instant > h3 {
+.instantPartHome > h3 {
   color: #ffffff;
   font-size: 54px;
   font-weight: 500;
@@ -433,7 +439,7 @@
   text-decoration-skip-ink: none;
   flex-shrink: 0;
 }
-.instant > h3 > span {
+.instantPartHome > h3 > span {
   color: #fc8a06;
   font-size: 54px;
   font-weight: 500;
@@ -445,7 +451,7 @@
   text-decoration-skip-ink: none;
   flex-shrink: 0;
 }
-.itemWrapper > h4 {
+.itemSectionsHome > h4 {
   font-family: Poppins;
   font-size: 24px;
   font-weight: 400;
@@ -457,14 +463,14 @@
   margin-right: 70px;
   flex-shrink: 0;
 }
-.storeLogo {
+.storeLogoHome {
   height: 55px;
   width: 25%;
   display: flex;
   gap: 2px;
   margin-right: 150px;
 }
-.appStore {
+.appStoreLogoHome {
   height: 100%;
   width: 206px;
   background-color: #000;
@@ -474,47 +480,47 @@
   border-radius: 6px;
   flex-shrink: 0;
 }
-.playStore {
+.playStoreLogoHome {
   height: 100%;
   width: 206px;
   flex-shrink: 0;
 }
-.playStore > img {
+.playStoreLogoHome > img {
   height: 100%;
   width: 100%;
 }
-.PersonalisedImg {
+.PersonalizedImageHome {
   position: absolute;
   bottom: 0;
   z-index: 1;
   height: 561px;
   width: 780px;
 }
-.PersonalisedImg > img {
+.PersonalizedImageHome > img {
   height: 100%;
   width: 100%;
 }
-.getStarted {
+.getStartedPartHome {
   height: 425px;
   width: 100%;
   margin-top: 50px;
   display: flex;
   gap: 20px;
 }
-.partner {
+.partnerPartHome {
   height: 100%;
   width: 50%;
-  min-width: 650px;
+  /* min-width: 650px; */
   border-radius: 12px;
   overflow: hidden;
   position: relative;
 }
-.partner > img {
+.partnerPartHome > img {
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
-.earn {
+.earnPartHome {
   font-family: "Poppins";
   position: absolute;
   top: 0;
@@ -535,26 +541,26 @@
   text-decoration-skip-ink: none;
 }
 
-.rideWithUs {
+.rideWithUsPartHome {
   height: 100%;
   width: 50%;
-  min-width: 650px;
+  /* min-width: 650px; */
   border-radius: 12px;
   overflow: hidden;
 }
-.rideWithUs > img {
+.rideWithUsPartHome > img {
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
-.business {
+.businessPartHome {
   position: absolute;
   display: flex;
   flex-direction: column;
   bottom: 43px;
   left: 40px;
 }
-.business > h3 {
+.businessPartHome > h3 {
   font-size: 18px;
   font-weight: 500;
   line-height: 27px;
@@ -563,7 +569,7 @@
   text-decoration-skip-ink: none;
   color: #fc8a06;
 }
-.business > h4 {
+.businessPartHome > h4 {
   font-family: Poppins;
   font-size: 44px;
   font-weight: 700;
@@ -573,7 +579,7 @@
   text-decoration-skip-ink: none;
   color: #ffffff;
 }
-.business > button {
+.businessPartHome > button {
   height: 52px;
   width: 205px;
   background: #fc8a06;
@@ -581,7 +587,7 @@
   border: none;
   border-radius: 120px;
 }
-.aboutUs {
+.aboutUsPartHome {
   width: 100%;
   height: 882px;
   border-radius: 12px;
@@ -594,14 +600,14 @@
   align-items: center;
   justify-content: center;
 }
-.navItems {
+.navItemsHome {
   width: 80%;
   height: 62px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.navItems > h2 {
+.navItemsHome > h2 {
   font-size: 25px;
   font-weight: 700;
   line-height: 48px;
@@ -609,12 +615,12 @@
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
 }
-.navList {
+.navListHome {
   display: flex;
   align-items: center;
   gap: 20px;
 }
-.navList > p {
+.navListHome > p {
   list-style-type: none;
   font-size: 14px;
   font-weight: 700;
@@ -624,7 +630,7 @@
   text-decoration-skip-ink: none;
 }
 
-.question {
+.questionsPartHome {
   font-family: Poppins;
   display: flex;
   align-items: center;
@@ -640,7 +646,7 @@
   width: 219px;
   border-radius: 120px;
 }
-.info {
+.informationsPartHome {
   width: 80%;
   height: 526px;
   border-radius: 12px;
@@ -649,17 +655,17 @@
   display: flex;
   align-items: center;
 }
-.infoList {
+.infoListPartHome {
   height: 100%;
   width: 40%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  gap: 35px;
+  gap: 25px;
+  margin-top: 180px;
 }
 
-.work {
+.workPartHome {
   width: 346px;
   height: 62px;
   gap: 0px;
@@ -673,18 +679,14 @@
   font-weight: 700;
   line-height: 27px;
   letter-spacing: -0.02em;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
 }
-.infoList > p {
+.infoListPartHome > p {
   font-size: 18px;
   font-weight: 700;
   line-height: 27px;
   letter-spacing: -0.02em;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
 }
-.promotion {
+.promotionPartHome {
   font-family: Poppins;
   font-size: 18px;
   font-weight: 700;
@@ -694,7 +696,7 @@
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
 }
-.aboutOrder {
+.aboutOrderPartHome {
   height: 100%;
   width: 60%;
   display: flex;
@@ -703,7 +705,7 @@
   flex-direction: column;
   gap: 30px;
 }
-.aboutOrder > h4 {
+.aboutOrderPartHome > h4 {
   font-family: Poppins;
   font-size: 14px;
   font-weight: 400;
@@ -714,13 +716,13 @@
   text-decoration-skip-ink: none;
   padding: 0 30px;
 }
-.aboutCards {
+.aboutCardsPartHome {
   height: 245px;
   width: 100%;
   display: flex;
   gap: 20px;
 }
-.aboutOrderLogo {
+.aboutOrderLogoHome {
   width: 200px;
   height: 245px;
   border-radius: 12px;
@@ -733,7 +735,7 @@
   gap: 10px;
   flex-shrink: 0;
 }
-.aboutOrderLogo > h3 {
+.aboutOrderLogoHome > h3 {
   font-family: Poppins;
   font-size: 18px;
   font-weight: 700;
@@ -743,28 +745,27 @@
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
 }
-.orderImage {
+.orderImageHome {
   width: 128px;
   height: 128px;
   gap: 0px;
   opacity: 0px;
 }
-.orderImage > img {
+.orderImageHome > img {
   height: 100%;
   width: 100%;
 }
-.aboutOrderLogo > h4 {
+.aboutOrderLogoHome > h4 {
   font-family: Poppins;
   font-size: 13px;
-  font-weight: 500;
-  line-height: 25px;
+  font-weight: 600;
   letter-spacing: -0.02em;
   text-align: center;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
   padding: 0 5px;
 }
-.history {
+.historyPartHome {
   width: 100%;
   height: 158px;
   border-radius: 12px;
@@ -776,35 +777,1442 @@
   align-items: center;
   padding: 0 60px;
 }
-.historyText{
+.historyTextPartHome {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.historyText > p {
-  font-family: Poppins;
+.historyTextPartHome > p {
   font-size: 44px;
   font-weight: 300;
   line-height: 38px;
   text-align: center;
   color: #ffffff;
 }
-.historyText > h3 {
-  font-family: Poppins;
+.historyTextPartHome > h3 {
   font-size: 24px;
   font-weight: 700;
   line-height: 38px;
   text-align: center;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
   color: #ffffff;
 }
 .line {
   width: 1px;
   height: 100px;
   opacity: 0px;
-  background: #D9D9D9;
+  background: #d9d9d9;
 }
-.footer{
+.footerHome {
   margin-top: 50px;
+}
+.nextPageHome {
+  display: none;
+}
+.nextPagePart1Home {
+  display: none;
+}
+@media (max-width: 1450px) {
+  .rideWithUsPartHome > img {
+    object-fit: fill;
+  }
+  .cardsHome > h3 {
+    font-size: 15px;
+  }
+  .headerImageOneHome {
+    width: 750px;
+    right: 250px;
+  }
+  .headerImageTwoHome {
+    width: 300px;
+    right: 225px;
+  }
+  .headerImageThreeHome {
+    width: 500px;
+  }
+  .headerImageFourHome {
+    width: 350px;
+  }
+  .headerImageFiveHome {
+    width: 350px;
+  }
+  .headerImageSixHome {
+    width: 350px;
+  }
+  .firstImageHome > h4 {
+    top: 100px;
+  }
+  .firstImageHome > h5 {
+    top: 118px;
+  }
+  .firstImgOneHome > h4 {
+    top: 100px;
+  }
+  .firstImgOneHome > h5 {
+    top: 118px;
+  }
+  .tickHome {
+    top: 100px;
+  }
+  .aboutOrderLogoHome {
+    width: 30%;
+  }
+  .trackingImgHome {
+    top: 115px;
+  }
+
+  .instantPartHome > h3 > span {
+    font-size: 44px;
+  }
+  .instantPartHome > h3 {
+    font-size: 44px;
+  }
+  .itemSectionsHome > h4 {
+    font-size: 19px;
+  }
+  .appStoreLogoHome {
+    width: 180px;
+  }
+  .playStoreLogoHome {
+    width: 180px;
+  }
+  .storeLogoHome {
+    margin-right: 120px;
+  }
+}
+@media (max-width: 1370px) {
+  .headerImageOneHome {
+    width: 700px;
+    right: 230px;
+  }
+  .headerImageTwoHome {
+    width: 300px;
+    right: 180px;
+  }
+  .headerImageThreeHome {
+    width: 470px;
+  }
+  .headerImageFourHome {
+    width: 330px;
+  }
+  .headerImageFiveHome {
+    width: 330px;
+  }
+  .headerImageSixHome {
+    width: 330px;
+  }
+  .firstImageHome > h4 {
+    top: 95px;
+  }
+  .firstImageHome > h5 {
+    top: 113px;
+  }
+  .firstImgOneHome > h4 {
+    top: 95px;
+  }
+  .firstImgOneHome > h5 {
+    top: 113px;
+  }
+  .tickHome {
+    top: 94px;
+  }
+  .text > h1 {
+    font-size: 45px;
+  }
+  .text > h3 {
+    font-size: 45px;
+  }
+  .trackingImgHome {
+    top: 110px;
+  }
+
+  .instantPartHome > h3 > span {
+    font-size: 44px;
+  }
+  .instantPartHome > h3 {
+    font-size: 44px;
+  }
+  .itemSectionsHome > h4 {
+    font-size: 19px;
+  }
+  .appStoreLogoHome {
+    width: 180px;
+  }
+  .playStoreLogoHome {
+    width: 180px;
+  }
+  .storeLogoHome {
+    margin-right: 120px;
+  }
+
+  .PersonalizedImageHome {
+    height: 561px;
+    width: 680px;
+  }
+  .itemListHome {
+    gap: 50px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .text > h1 {
+    font-size: 40px;
+  }
+  .text > h3 {
+    font-size: 40px;
+  }
+  .PersonalizedImageHome {
+    height: 561px;
+    width: 600px;
+  }
+  .earnPartHome {
+    width: 230px;
+  }
+  .earnPartHome > h3 {
+    font-size: 16px;
+  }
+  .workPartHome {
+    width: 280px;
+  }
+  .infoListPartHome > p {
+    font-size: 15px;
+  }
+  .promotionPartHome {
+    font-size: 15px;
+  }
+  .aboutOrderLogoHome {
+    height: 210px;
+    gap: 5px;
+  }
+  .aboutOrderLogoHome > h4 {
+    font-size: 10px;
+  }
+  .aboutOrderPartHome {
+    gap: 0px;
+  }
+}
+@media (max-width: 1200px) {
+  .headerImages {
+    height: 450px;
+    width: 100%;
+    border: 1px solid black;
+    margin-top: 41px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    border: 1px solid #00000033;
+    background: #fbfbfb;
+    border-radius: 12px;
+  }
+  .text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+  }
+  .text > p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 66px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+  .text > h1 {
+    font-size: 44px;
+    font-weight: 600;
+    line-height: 66px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+  .text > h3 {
+    font-size: 44px;
+    font-weight: 600;
+    line-height: 66px;
+    text-align: left;
+    color: #fc8a06;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+  .text > h4 {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 66px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+  .headerInputHome {
+    display: flex;
+    position: relative;
+    height: auto;
+    width: 80%;
+  }
+  .headerInputHome > input {
+    height: 57px;
+    width: 75%;
+    border: 1px solid #00000066;
+    border-radius: 120px;
+    flex-shrink: 0;
+    padding-left: 20px;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 66px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    outline: none;
+  }
+  .headerInputHome > button {
+    position: absolute;
+    height: 57px;
+    width: 188px;
+    right: 0;
+    background-color: #fc8a06;
+    border-radius: 120px;
+    border: none;
+  }
+  .headerImageOneHome {
+    position: absolute;
+    height: 407px;
+    width: 605px;
+    bottom: 0;
+    right: 160px;
+    z-index: 6;
+  }
+  .headerImageOneHome > img {
+    height: 100%;
+    width: 100%;
+  }
+  .headerImageTwoHome {
+    position: absolute;
+    height: 355px;
+    width: 237px;
+    bottom: 0;
+    right: 135px;
+    z-index: 5;
+  }
+  .headerImageTwoHome > img {
+    height: 100%;
+    width: 100%;
+  }
+  .headerImageThreeHome {
+    position: absolute;
+    height: 420px;
+    width: 365px;
+    right: 0;
+    bottom: 0;
+    z-index: 4;
+  }
+  .headerImageThreeHome > img {
+    height: 100%;
+    width: 100%;
+  }
+  .headerImageFourHome {
+    position: absolute;
+    height: 133px;
+    width: 240px;
+    z-index: 7;
+    right: 22px;
+    top: 288px;
+    overflow: hidden;
+    border-radius: 12px;
+  }
+  .headerImageFourHome > img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+  .headerImageFiveHome {
+    position: absolute;
+    height: 153px;
+    width: 230px;
+    z-index: 7;
+    right: 30px;
+    top: 30px;
+  }
+  .firstImageHome {
+    position: relative;
+  }
+  .firstImageHome > img {
+    height: 100%;
+    width: 100%;
+  }
+  .firstImageHome > h4 {
+    position: absolute;
+    top: 60px;
+    left: 24px;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 18px;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+  .firstImageHome > h5 {
+    position: absolute;
+    top: 74px;
+    left: 24px;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 18px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+  .trackingImgHome {
+    position: absolute;
+    height: 12px;
+    width: 12px;
+    top: 70px;
+    left: 163px;
+    z-index: 10;
+  }
+  .headerImageSixHome {
+    position: absolute;
+    height: 153px;
+    width: 210px;
+    z-index: 7;
+    right: -6px;
+    top: 186px;
+  }
+  .firstImageHome {
+    position: relative;
+  }
+  .firstImgOneHome > img {
+    height: 100%;
+    width: 100%;
+  }
+  .firstImgOneHome > h4 {
+    position: absolute;
+    top: 58px;
+    left: 24px;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 18px;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+  .firstImgOneHome > h5 {
+    position: absolute;
+    top: 70px;
+    left: 24px;
+    font-size: 8px;
+    font-weight: 500;
+    line-height: 18px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+  .tickHome {
+    position: absolute;
+    height: 17px;
+    width: 17px;
+    top: 56px;
+    left: 134px;
+  }
+
+  .firstSectionHome {
+    height: 320px;
+    width: 100%;
+    margin-top: 40px;
+  }
+  .sectionFirstHeaderHome {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    width: 100%;
+    padding: 0 20px;
+    flex-shrink: 0;
+  }
+  .sectionFirstHeaderHome > h4 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 48px;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    flex-shrink: 0;
+  }
+  .itemListHome {
+    gap: 40px;
+  }
+
+  .sectionOneImageHome {
+    height: 240px;
+    width: 100%;
+  }
+
+  .sectionOneImageOneHome > img {
+    object-fit: contain;
+  }
+  .secondSectionHome {
+    height: 305px;
+    width: 100%;
+    margin-top: 20px;
+  }
+  .secondSectionHeaderHome {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    padding: 0 20px;
+    flex-shrink: 0;
+  }
+  .secondSectionHeaderHome > h4 {
+    font-size: 26px;
+  }
+  .secondSectionImageHome {
+    gap: 18px;
+  }
+  .sectionTwoDivOneHome {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+  .secondSectionImageOneHome {
+    height: 200px;
+  }
+  .secondSectionImageOneHome > img {
+    object-fit: fill;
+  }
+  .cardsHome > h3 {
+    font-size: 14px;
+  }
+
+  .orderingImageHome {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 36%;
+    flex-shrink: 0;
+    margin-right: 120px;
+  }
+  .orderingImageHome > p {
+    font-size: 58px;
+    font-weight: 700;
+    letter-spacing: -0.06em;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    flex-shrink: 0;
+  }
+  .orderingImageHome > h4 {
+    font-size: 58px;
+    font-weight: 700;
+    line-height: 102px;
+    letter-spacing: -0.06em;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    margin-left: 30px;
+    flex-shrink: 0;
+  }
+  .orderingImageHome > img {
+    height: 100%;
+    width: 50%;
+    flex-shrink: 0;
+  }
+  .PersonalizedImageHome {
+    width: 500px;
+  }
+  .sectionOneImageHome {
+    gap: 15px;
+  }
+  .secondSectionImageHome {
+    gap: 15px;
+  }
+  .getStartedPartHome {
+    height: 350px;
+  }
+  .aboutUsPartHome {
+    height: 700px;
+  }
+  .informationsPartHome {
+    height: 450px;
+  }
+  .navItemsHome > h2 {
+    font-size: 20px;
+  }
+  .questionsPartHome {
+    height: 40px;
+    width: 150px;
+    font-size: 10px;
+  }
+  .infoListPartHome {
+    margin-top: 100px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+  }
+  .text > p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 66px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+  .text > h1 {
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 66px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+  .text > h3 {
+    font-size: 34px;
+  }
+  .text > h4 {
+    font-size: 13px;
+  }
+  .headerInputHome {
+    display: flex;
+    position: relative;
+    height: auto;
+    width: 70%;
+  }
+  .headerInputHome > input {
+    height: 57px;
+    width: 75%;
+  }
+  .headerInputHome > button {
+    width: 138px;
+  }
+  .PersonalizedImageHome {
+    width: 450px;
+    height: 550px;
+  }
+  .instantPartHome > h3 {
+    font-size: 34px;
+  }
+  .storeLogoHome {
+    margin-right: 150px;
+  }
+  .navItemsHome {
+    width: 90%;
+  }
+  .informationsPartHome {
+    width: 90%;
+  }
+  .historyTextPartHome > p {
+    font-size: 34px;
+  }
+  .historyTextPartHome > h3 {
+    font-size: 18px;
+  }
+}
+@media (max-width: 1024px) {
+  .text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+  }
+  .text > p {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 66px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+  .text > h1 {
+    font-size: 27px;
+    font-weight: 600;
+    line-height: 66px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+  .text > h3 {
+    font-size: 27px;
+  }
+  .text > h4 {
+    font-size: 10px;
+  }
+  .headerInputHome {
+    display: flex;
+    position: relative;
+    height: auto;
+    width: 70%;
+  }
+  .headerInputHome > input {
+    height: 57px;
+    width: 75%;
+  }
+  .headerInputHome > button {
+    width: 100px;
+  }
+  .headerImageOneHome {
+    position: absolute;
+    height: 407px;
+    width: 575px;
+    bottom: 0;
+    right: 160px;
+    z-index: 6;
+  }
+  .sectionFirstHeaderHome > h4 {
+    font-size: 17px;
+  }
+  .itemListHome {
+    gap: 20px;
+  }
+
+  .sectionOneImageHome {
+    height: 240px;
+    width: 100%;
+  }
+
+  .sectionOneImageOneHome > img {
+    object-fit: contain;
+  }
+
+  .secondSectionHome {
+    height: 265px;
+    width: 100%;
+    margin-top: 20px;
+  }
+  .secondSectionHeaderHome {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    padding: 0 20px;
+    flex-shrink: 0;
+  }
+  .secondSectionHeaderHome > h4 {
+    font-size: 26px;
+  }
+  .secondSectionImageHome {
+    gap: 18px;
+  }
+  .sectionTwoDivOneHome {
+    height: 170px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+  .secondSectionImageOneHome {
+    height: 200px;
+  }
+  .secondSectionImageOneHome > img {
+    object-fit: fill;
+  }
+  .cardsHome > h3 {
+    font-size: 10px;
+    line-height: 5px;
+  }
+  .cardsHome > h4 {
+    font-size: 9px;
+    line-height: 25px;
+  }
+  .secondSectionImageHome {
+    gap: 14px;
+  }
+  .PersonalizedImageHome {
+    width: 450px;
+    height: 550px;
+  }
+  .instantPartHome > h3 {
+    font-size: 24px;
+  }
+  .itemSectionsHome > h4 {
+    margin-right: 30px;
+    font-size: 16px;
+  }
+  .appStoreLogoHome {
+    width: 160px;
+  }
+  .playStoreLogoHome {
+    width: 150px;
+  }
+  .earnPartHome {
+    width: 160px;
+    height: 50px;
+  }
+  .earnPartHome > h3 {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    padding: 0;
+  }
+  .headerImageOneHome,
+  .headerImageTwoHome,
+  .headerImageThreeHome,
+  .headerImageFourHome,
+  .headerImageFiveHome,
+  .headerImageSixHome {
+    display: none;
+  }
+  .headerImages {
+    height: 310px;
+    width: 95%;
+    margin-top: 41px;
+    background: #03081f;
+    border-radius: 12px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+  }
+  .text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+  }
+  .text > p {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 46px;
+    text-align: center;
+  }
+  .text > h1 {
+    color: #ffffff;
+    font-size: 44px;
+    font-weight: 600;
+    line-height: 36px;
+    text-align: left;
+  }
+  .text > h3 {
+    font-size: 38px;
+    font-weight: 600;
+    line-height: 66px;
+    text-align: center;
+    color: #fc8a06;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+  .text > h4 {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 16px;
+    text-align: center;
+  }
+  .headerInputHome {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: auto;
+    width: 100%;
+    margin-top: 20px;
+  }
+  .headerInputHome > input {
+    height: 57px;
+    width: 95%;
+    border: 1px solid #00000066;
+    border-radius: 120px;
+    flex-shrink: 0;
+    padding-left: 20px;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 66px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    outline: none;
+  }
+  .nextPageHome {
+    display: block;
+    padding-left: 11px;
+  }
+  .headerInputHome > button {
+    position: absolute;
+    height: 57px;
+    width: 57px;
+    font-size: 0px;
+    right: 5px;
+    background-color: #fc8a06;
+    border-radius: 120px;
+    border: none;
+  }
+  .itemListHome > p {
+    display: none;
+  }
+  .pizzaHome {
+    border: 1px solid #03081f;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  .nextPagePart1Home {
+    display: flex;
+    transform: rotate(90deg);
+    height: 20px;
+    width: 20px;
+  }
+  .sectionOneImageHome {
+    padding-left: 20px;
+    width: 99%;
+    height: 240px;
+    overflow: scroll;
+    overflow-y: hidden;
+    scrollbar-width: thin;
+  }
+  .sectionOneImageOneHome {
+    width: 300px;
+    display: inline-block;
+  }
+  .secondSectionImageHome {
+    flex-wrap: wrap;
+    margin-left: 20px;
+    justify-content: center;
+  }
+  .sectionTwoDivOneHome {
+    width: 150px;
+    background-color: #000;
+    border: none;
+  }
+  .secondSectionHome {
+    height: auto;
+    background: #d9d9d980;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    padding-bottom: 20px;
+  }
+  .cardsHome > h3 {
+    color: #fc8a06;
+  }
+  .cardsHome > h4 {
+    color: #ffffff;
+  }
+
+  .PersonalizedHome {
+    height: auto;
+    width: 100%;
+    position: relative;
+    padding-left: 30px;
+    margin-top: 30px;
+  }
+  .itemSectionsHome {
+    position: relative;
+    height: 711px;
+    width: 95%;
+    bottom: 0;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 0px;
+    padding-left: 0px;
+    background: linear-gradient(180deg, #eeeeee 0%, #e0e1dc 100%);
+  }
+  .orderingImageHome {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    width: 300px;
+    flex-shrink: 0;
+    margin-right: 0px;
+    margin-top: 50px;
+  }
+  .orderingImageHome > p {
+    font-size: 48px;
+    font-weight: 900;
+    letter-spacing: -0.06em;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    flex-shrink: 0;
+  }
+  .orderingImageHome > h4 {
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 102px;
+    letter-spacing: -0.06em;
+    text-align: left;
+    margin-left: 30px;
+    flex-shrink: 0;
+  }
+  .orderingImageHome > img {
+    height: 100%;
+    width: 50%;
+    flex-shrink: 0;
+  }
+  .instantPartHome {
+    height: 70px;
+    width: 60%;
+    background: none;
+    padding-right: 0px;
+    border-radius: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .instantPartHome > h3 {
+    color: #000;
+    font-size: 34px;
+    font-weight: 500;
+    letter-spacing: -0.06em;
+    text-align: right;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    flex-shrink: 0;
+  }
+  .instantPartHome > h3 > span {
+    color: #fc8a06;
+    font-size: 34px;
+    font-weight: 500;
+    letter-spacing: -0.06em;
+    text-align: left;
+    text-decoration-line: underline;
+    text-decoration-style: unset;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    flex-shrink: 0;
+  }
+  .itemSectionsHome > h4 {
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 36px;
+    letter-spacing: -0.06em;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    margin-right: 0px;
+    flex-shrink: 0;
+  }
+  .storeLogoHome {
+    height: 55px;
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    margin-right: 0px;
+    margin-top: 30px;
+  }
+  .appStoreLogoHome {
+    height: 100%;
+    width: 206px;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    flex-shrink: 0;
+  }
+  .playStoreLogoHome {
+    height: 100%;
+    width: 206px;
+    flex-shrink: 0;
+  }
+  .playStoreLogoHome > img {
+    height: 100%;
+    width: 100%;
+  }
+  .PersonalizedImageHome {
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+    z-index: 1;
+    height: 361px;
+    width: 480px;
+  }
+  .PersonalizedImageHome > img {
+    height: 100%;
+    width: 100%;
+  }
+  .getStartedPartHome {
+    height: 900px;
+    width: 95%;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 30px;
+  }
+  .partnerPartHome {
+    height: 100%;
+    width: 100%;
+    /* min-width: 650px; */
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+  }
+  .partnerPartHome > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .rideWithUsPartHome {
+    height: 100%;
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .rideWithUsPartHome > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .aboutUsPartHome {
+    height: auto;
+    background: #ffffff;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+  }
+  .aboutOrderPartHome {
+    width: 350px;
+    height: auto;
+    border-radius: 12px;
+    margin-top: 30px;
+    background: #03081f;
+  }
+  .aboutCardsPartHome {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding-top: 50px;
+  }
+  .aboutOrderLogoHome {
+    width: 200px;
+    height: 245px;
+  }
+  .aboutOrderPartHome > h4 {
+    margin-bottom: 30px;
+    margin-top: 30px;
+    color: #ffffff;
+  }
+  .infoListPartHome {
+    width: 300px;
+  }
+  .navItemsHome {
+    justify-content: center;
+  }
+  .navItemsHome > h2 {
+    font-weight: 900;
+  }
+  .navListHome {
+    display: none;
+  }
+  .infoListPartHome {
+    margin-top: 0px;
+  }
+  .informationsPartHome {
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    justify-content: start;
+  }
+  .historyPartHome {
+    flex-direction: column;
+    height: auto;
+    gap: 40px;
+    padding: 40px 0;
+    margin-left: 30px;
+    width: 90%;
+  }
+  .line {
+    width: 200px;
+    height: 1px;
+    opacity: 0px;
+    background: #d9d9d9;
+  }
+  .historyTextPartHome {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .historyTextPartHome > p {
+    font-size: 44px;
+    font-weight: 300;
+    line-height: 38px;
+    text-align: center;
+    color: #ffffff;
+  }
+  .historyTextPartHome > h3 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 38px;
+    text-align: center;
+    color: #ffffff;
+  }
+}
+
+@media (max-width: 600px) {
+  .headerImages {
+    justify-content: start;
+    width: 94%;
+  }
+  .pizzaHome {
+    width: 150px;
+    font-size: 13px;
+  }
+  .nextPagePart1Home {
+    display: flex;
+    transform: rotate(90deg);
+    height: 20px;
+    width: 20px;
+  }
+  .sectionFirstHeaderHome > h4 {
+    display: none;
+  }
+  .sectionFirstHeaderHome > h6 {
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .sectionOneImageHome {
+    padding-left: 20px;
+    width: 99%;
+    height: 150px;
+    overflow: scroll;
+    overflow-y: hidden;
+    scrollbar-width: thin;
+    margin-top: 20px;
+  }
+  .sectionOneImageOneHome {
+    width: 200px;
+  }
+  .firstSectionHome {
+    height: 230px;
+  }
+  .orderingImageHome {
+    width: 200px;
+    height: 38px;
+  }
+  .orderingImageHome > p {
+    font-size: 28px;
+    line-height: 0px;
+  }
+  .orderingImageHome > h4 {
+    font-size: 28px;
+    margin-left: 15px;
+    line-height: 0px;
+  }
+  .itemSectionsHome {
+    height: 600px;
+    padding-left: 30px;
+  }
+  .instantPartHome > h3 {
+    font-size: 24px;
+    line-height: 0px;
+  }
+  .instantPartHome > h3 > span {
+    font-size: 24px;
+    line-height: 0px;
+  }
+  .itemSectionsHome > h4 {
+    font-size: 18px;
+    line-height: 0px;
+  }
+  .storeLogoHome {
+    margin-top: 15px;
+  }
+  .appStoreLogoHome {
+    width: 180px;
+  }
+  .playStoreLogoHome {
+    width: 180px;
+  }
+  .orderingImageHome > img {
+    object-fit: contain;
+  }
+  .PersonalizedImageHome {
+    left: 14%;
+    width: 400px;
+  }
+  .rideWithUsPartHome > img {
+    object-fit: contain;
+  }
+  .partnerPartHome > img {
+    object-fit: contain;
+  }
+  .getStartedPartHome {
+    height: 600px;
+  }
+  .businessPartHome {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    bottom: 43px;
+    left: 40px;
+  }
+  .businessPartHome > h3 {
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 27px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #fc8a06;
+  }
+  .earnPartHome {
+    height: 61px;
+    width: 188px;
+    left: 40px;
+    font-size: 16px;
+  }
+}
+@media (max-width: 500px) {
+  .headerImages {
+    justify-content: start;
+    margin-left: 10px;
+  }
+  .text > p {
+    font-size: 11px;
+  }
+  .text > h1 {
+    font-size: 34px;
+    line-height: 24px;
+  }
+  .text > h3 {
+    font-size: 28px;
+  }
+  .text > h4 {
+    font-size: 12px;
+  }
+  .sectionFirstHeaderHome > h6 {
+    font-size: 14px;
+  }
+  .secondSectionHeaderHome > h4 {
+    font-size: 20px;
+  }
+  .orderingImageHome {
+    width: 200px;
+    height: 38px;
+  }
+  .orderingImageHome > p {
+    font-size: 28px;
+  }
+  .orderingImageHome > h4 {
+    font-size: 28px;
+    margin-left: 15px;
+  }
+  .itemSectionsHome {
+    padding-left: 30px;
+  }
+  .instantPartHome > h3 {
+    font-size: 24px;
+    line-height: 0px;
+  }
+  .instantPartHome > h3 > span {
+    font-size: 24px;
+  }
+  .itemSectionsHome > h4 {
+    font-size: 13px;
+  }
+  .appStoreLogoHome {
+    width: 160px;
+  }
+  .playStoreLogoHome {
+    width: 150px;
+  }
+  .storeLogoHome {
+    width: 18%;
+  }
+  .orderingImageHome > img {
+    object-fit: contain;
+  }
+  .PersonalizedImageHome {
+    left: 10%;
+    width: 340px;
+  }
+  .getStartedPartHome {
+    height: 510px;
+  }
+  .earnPartHome {
+    height: 41px;
+    width: 158px;
+    left: 40px;
+    font-size: 16px;
+  }
+  .businessPartHome > h3 {
+    font-size: 14px;
+    line-height: 7px;
+    color: #fc8a06;
+  }
+  .businessPartHome > h4 {
+    font-size: 24px;
+    line-height: 26px;
+    color: #ffffff;
+  }
+  .businessPartHome {
+    gap: 10px;
+  }
+  .businessPartHome > button {
+    position: absolute;
+    height: 32px;
+    width: 125px;
+    background: #fc8a06;
+    color: #ffffff;
+    border: none;
+    border-radius: 120px;
+    /* margin-top: -0px; */
+    top: 45px;
+  }
+}
+@media (max-width: 450px) {
+  .getStartedPartHome {
+    height: 460px;
+  }
+  .businessPartHome {
+    justify-content: end;
+  }
+}
+
+@media (max-width: 415px) {
+  .text > p {
+    font-size: 10px;
+  }
+  .text > h1 {
+    font-size: 28px;
+    line-height: 24px;
+  }
+  .text > h3 {
+    font-size: 22px;
+  }
+  .text > h4 {
+    font-size: 11px;
+  }
+  .pizzaHome {
+    height: 40px;
+    width: 100px;
+    font-size: 10px;
+  }
+  .nextPagePart1Home {
+    height: 10px;
+    width: 10px;
+  }
+  .itemSectionsHome > h4 {
+    font-size: 11px;
+  }
+  .appStoreLogoHome {
+    width: 150px;
+  }
+  .playStoreLogoHome {
+    width: 130px;
+  }
+  .orderingImageHome > img {
+    object-fit: contain;
+  }
+  .PersonalizedImageHome {
+    left: 10%;
+    width: 300px;
+  }
+  .getStartedPartHome {
+    height: 415px;
+  }
+  .historyPartHome {
+    width: 85%;
+  }
 }

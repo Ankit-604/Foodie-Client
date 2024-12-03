@@ -1,70 +1,158 @@
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
+.AddCardOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.AddCardContainer {
+  background: white;
+  border-radius: 8px;
+  width: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  text-align: center;
+}
+
+.AddCardContainer h2 {
+  font-size: 1.5rem;
+  text-align: left;
+  padding: 0 30px;
+  padding-top: 20px;
+}
+
+.AddCardContainer form {
+  display: grid;
+  gap: 15px;
+}
+
+.AddCardContainer label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 36px;
+  text-align: left;
+  /* gap: 30px; */
+  padding: 0 30px;
+}
+
+.AddCardContainer input {
+  padding: 8px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 73%;
+  padding: 0 15px;
+}
+
+.AddCardActions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  background: #fc8a06;
+  height: 100px;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.removeButton {
+  background: #bf4c4c;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 50px;
+  width: 120px;
+  background: #663700;
+}
+
+.cancelButton {
+  background: none;
+  color: #ffffff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-size: 17px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.saveButton {
+  background: #ffffff;
+  color: #000000;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 50px;
+  width: 150px;
+}
+
+.cancelSaveButton {
+  display: flex;
+  gap: 5px;
+}
+@media (max-width: 1280px) {
+  .AddCardContainer input {
+    width: 65%;
   }
-  
-  .container {
-    background: white;
-    border-radius: 8px;
-    width: 50%;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    position: relative;
-    text-align: center;
+}
+@media (max-width: 992px) {
+  .AddCardContainer label {
+    font-size: 17px;
   }
-  
-  .container h2 {
-    font-size: 1.5rem;
-    text-align: left;
-    padding: 0 30px;
-    padding-top: 20px;
+  .AddCardContainer {
+    width: 60%;
   }
-  
-  .container form {
-    display: grid;
-    gap: 15px;
+}
+@media (max-width: 768px) {
+  .AddCardOverlay {
+    align-items: start;
   }
-  
-  .container label {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 36px;
-    text-align: left;
-    gap: 30px;
-    padding: 0 30px;
+  .AddCardContainer {
+    height: 350px;
+    width: 70%;
+    margin-top: 70px;
   }
-  
-  .container input {
-    padding: 8px;
+}
+@media (max-width: 768px) {
+  .AddCardOverlay {
+    align-items: start;
+  }
+  .AddCardContainer {
+    height: 350px;
+    width: 70%;
+    margin-top: 70px;
+  }
+  .AddCardContainer > h2 {
+    padding-top: 10px;
+  }
+  form {
+    margin-top: 10px;
+  }
+}
+@media (max-width: 600px) {
+  .AddCardContainer label {
+    font-size: 15px;
+  }
+  .AddCardContainer input {
+    width: 55%;
+    height: 30px;
+  }
+  .AddCardContainer h2 {
     font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    width: 73%;
-    padding: 0 15px;
   }
-  
-  .actions {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 20px;
-    background: #fc8a06;
-    height: 100px;
-    width: 100%;
-    padding: 0 20px;
-  }
-  
-  .removeButton {
+  .cancelButton {
     background: #bf4c4c;
     color: white;
     border: none;
@@ -72,34 +160,43 @@
     border-radius: 5px;
     cursor: pointer;
     height: 50px;
-    width: 120px;
+    width: 50%;
     background: #663700;
   }
-  
-  .cancelButton {
+  .AddCardActions {
+    margin-top: 5px;
     background: none;
-    color: #ffffff;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 4px;
-    font-size: 17px;
-    font-weight: 500;
-    cursor: pointer;
+    justify-content: start;
+    gap: 10px;
   }
-  
   .saveButton {
-    background: #ffffff;
-    color: #000000;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    height: 50px;
-    width: 150px;
+    background: #fc8a06;
+    width: 50%;
+    color: #ffffff;
   }
-  
-  .cancelSaveButton {
-    display: flex;
+  .AddCardContainer {
+    height: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .AddCardContainer label {
+    font-size: 13px;
+  }
+  .AddCardContainer input {
+    width: 60%;
+    font-size: 0.7rem;
+  }
+  .AddCardContainer h2 {
+    font-size: 1rem;
+  }
+  .AddCardContainer form {
     gap: 5px;
   }
-  
+  .AddCardActions {
+    margin-top: 0;
+  }
+  .AddCardContainer {
+    width: 90%;
+  }
+}

@@ -1,8 +1,9 @@
-.fooditem {
+.foodItemBurger {
   height: auto;
   width: 100%;
 }
-.burger {
+
+.burgerMain {
   height: auto;
   width: 100%;
   display: flex;
@@ -11,7 +12,8 @@
   margin-top: 40px;
 }
 
-.burger > h2 {
+.burgerMain > h2,
+.fries {
   font-family: Poppins;
   font-size: 44px;
   font-weight: 700;
@@ -20,20 +22,23 @@
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
 }
-.cardWrapper {
+
+.burgerCardWrapper {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
 }
+
 .burgerCard {
   width: 445px;
   height: 205px;
   display: flex;
   box-shadow: 0px 4px 20px 0px #00000040;
-  border: 1px solid #0000001A;
+  border: 1px solid #0000001a;
   border-radius: 8px;
 }
-.cardDetails {
+
+.cardDetailsBurger {
   height: 100%;
   width: 60%;
   display: flex;
@@ -43,30 +48,33 @@
   gap: 10px;
   padding-left: 30px;
 }
-.cardDetails > h3 {
+
+.cardDetailsBurger > h3,
+.cardDetailsBurger > h4,
+.cardDetailsBurger > h5 {
   font-family: Poppins;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.cardDetailsBurger > h3 {
   font-size: 20px;
   font-weight: 600;
   line-height: 23px;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
 }
-.cardDetails > h4 {
-  font-family: Poppins;
+
+.cardDetailsBurger > h4 {
   font-size: 14px;
   font-weight: 400;
   line-height: 25px;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
 }
-.cardDetails > h5 {
-  font-family: Poppins;
+
+.cardDetailsBurger > h5 {
   font-size: 18px;
   font-weight: 700;
   line-height: 27px;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
 }
+
 .burgerCardImg {
   height: 100%;
   width: 40%;
@@ -74,40 +82,49 @@
   overflow: hidden;
   position: relative;
 }
-.mainImg {
+
+.mainImageBurger {
   height: 100%;
   width: 100%;
 }
-.mainImg > img {
+
+.mainImageBurger > img {
   height: 100%;
   width: 100%;
   object-fit: cover;
   border-radius: 12px;
 }
-.addBg {
+
+.addBg,
+.addImg {
   position: absolute;
+}
+
+.addBg {
   width: 88px;
   height: 81px;
   bottom: 20px;
   right: 10px;
   border-radius: 45px 0px 12px 0px;
 }
-.addBg > img {
+
+.addBg > img,
+.addImg > img {
   height: 100%;
   width: 100%;
 }
+
 .addImg {
-  position: absolute;
   width: 49px;
   height: 49px;
   bottom: 30px;
   right: 25px;
 }
+
 .addImg > img {
-  height: 100%;
-  width: 100%;
   cursor: pointer;
 }
+
 .notAvailable {
   margin-top: 100px;
   display: flex;
@@ -121,13 +138,87 @@
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
 }
-.fries{
-  font-family: Poppins;
-  font-size: 44px;
-  font-weight: 700;
-  line-height: 66px;
-  text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-  color: #FC8A06; 
+
+.fries {
+  color: #fc8a06;
+}
+@media (max-width: 1440px) {
+  .burgerCard {
+    width: 32%;
+    min-width: 400px;
+  }
+  .cardDetailsBurger > h3 {
+    font-size: 15px;
+  }
+  .mainImageBurger > img {
+    object-fit: fill;
+  }
+}
+@media (max-width: 1440px) {
+  .cardDetailsBurger > h4 {
+    font-size: 12px;
+  }
+  .burgerCard {
+    height: 185px;
+  }
+}
+@media (max-width: 1100px) {
+  .burgerCard {
+    width: 31%;
+    min-width: 380px;
+  }
+  .cardDetailsBurger > h3 {
+    line-height: 15px;
+    font-size: 13px;
+  }
+  .cardDetailsBurger > h4 {
+    line-height: 15px;
+    font-size: 11px;
+  }
+  .cardDetailsBurger > h5 {
+    line-height: 17px;
+  }
+  .addBg {
+    position: absolute;
+    width: 68px;
+    height: 61px;
+    bottom: 20px;
+    right: 10px;
+    border-radius: 45px 0px 12px 0px;
+  }
+  .addBg > img {
+    height: 100%;
+    width: 100%;
+  }
+  .addImg {
+    position: absolute;
+    width: 39px;
+    height: 39px;
+    bottom: 30px;
+    right: 20px;
+  }
+  .addImg > img {
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+  }
+}
+@media (max-width: 1024px) {
+  .burgerCard {
+    height: 170px;
+  }
+  .cardDetailsBurger > h3 {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 419px) {
+  .burgerCard {
+    min-width: 350px;
+  }
+}
+@media (max-width: 380px) {
+  .burgerCard {
+    min-width: 300px;
+  }
 }

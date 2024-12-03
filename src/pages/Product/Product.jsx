@@ -17,11 +17,16 @@ import Review from "../../components/Review/Review";
 import SimilarRestaurent from "../../components/SimilarRestaurent/SimilarRestaurent";
 import Footer from "../../components/Footer/Footer";
 import { useAuth } from "../../components/Context/AuthContext";
+import CartPopup from "../../components/CartPopup/CartPopup";
+import PaymentNav from "../../components/PaymentNav/PaymentNav";
+import toast from "react-hot-toast";
 
 const Product = () => {
   const [imageUrl, setImageUrl] = useState([]);
   const [cartUpdated, setCartUpdated] = useState(false);
-  const { showCart } = useAuth();
+  const [isCartOpen, setIsCartOpen] = useState(false);
+  const [search, setSearch] = useState("");
+  const { showCart, allCardName } = useAuth();
 
   useEffect(() => {
     try {
@@ -31,7 +36,7 @@ const Product = () => {
       };
       getImageUrl();
     } catch (error) {
-      console.error(error);
+      toast.error(error);
     }
   }, []);
 
@@ -41,68 +46,80 @@ const Product = () => {
 
   return (
     <>
-      <div className={styles.container}>
+      <div className={styles.containerProduct}>
         <Nav />
-        <NavBar />
-        <div className={styles.productHeader}>
-          <div className={styles.headerItem1}>
+        <PaymentNav setIsCartOpen={setIsCartOpen} />
+        <div className={styles.headerProduct}>
+          <div className={styles.headerItem1Product}>
             <h3>I'm lovin' it!</h3>
             <h4>McDonald’s East London</h4>
-            <div className={styles.orderWrapper}>
-              <div className={styles.minimumOrder}>
+            <div className={styles.orderWrapperProduct}>
+              <div className={styles.minimumOrderProduct}>
                 <img src={orderCompleteImg} alt="image" />
                 <p>Minimum Order: 12 GBP</p>
               </div>
-              <div className={styles.orderIn}>
+              <div className={styles.orderInProduct}>
                 <img src={orderInImg} alt="image" />
                 <p>Delivery in 20-25 Minutes</p>
               </div>
             </div>
           </div>
-          <div className={styles.headerItem2}>
-            <div className={styles.mainImg}>
+          <div className={styles.headerItem2Product}>
+            <div className={styles.mainImgProduct}>
               {imageUrl.map((img, i) => (
                 <img key={i} src={img.data.productImage1} alt="header-image" />
               ))}
             </div>
-            <div className={styles.rating}>
+            <div className={styles.ratingProduct}>
               {imageUrl.map((img, i) => (
                 <img key={i} src={img.data.productImage2} alt="header-image" />
               ))}
             </div>
           </div>
-          <div className={styles.clock}>
+          <div className={styles.clockProduct}>
             <img src={clock} alt="image" />
             <p>Open until 3:00 AM</p>
           </div>
         </div>
-        <div className={styles.search}>
+        <div className={styles.searchProduct}>
           <h2>All Offers from McDonald’s East London</h2>
-          <div className={styles.searchInput}>
+          <div className={styles.searchInputProduct}>
             <img src={searchImg} alt="image" />
-            <input type="text" placeholder="Search from menu..." />
+            <input
+              type="text"
+              value={search}
+              onChange={(e) => {
+                setSearch(e.target.value);
+              }}
+              placeholder="Search from menu..."
+            />
           </div>
         </div>
       </div>
-      <div className={styles.productList}>
-        <div className={styles.offer}>
-          <h3>Offers</h3>
+      <div className={styles.productScrollProduct}>
+        <div className={styles.productListProduct}>
+          <div className={styles.offerProduct}>
+            <h3>Offers</h3>
+          </div>
+          <p>Burgers</p>
+          <p>Fries</p>
+          <p>Snacks</p>
+          <p>Salads</p>
+          <p>Cold drinks</p>
+          <p>Happy Meal®</p>
+          <p>Desserts</p>
+          <p>Hot drinks</p>
+          <p>Sauces</p>
+          <p>Orbit®</p>
         </div>
-        <p>Burgers</p>
-        <p>Fries</p>
-        <p>Snacks</p>
-        <p>Salads</p>
-        <p>Cold drinks</p>
-        <p>Happy Meal®</p>
-        <p>Desserts</p>
-        <p>Hot drinks</p>
-        <p>Sauces</p>
-        <p>Orbit®</p>
       </div>
 
-      <div className={styles.main}>
+      <div className={styles.mainProduct}>
         <div>
-          <div className={styles.section1Image}>
+          <div
+            className={styles.section1Image}
+            onClick={() => setIsCartOpen(true)}
+          >
             <div className={styles.section1Image1}>
               {imageUrl.map((img, i) => (
                 <img key={i} src={img.data.productImage3} alt="image" />
@@ -119,20 +136,32 @@ const Product = () => {
               ))}
             </div>
           </div>
-          <Burgers cartUpdated={cartUpdated} onCartUpdate={handleCartUpdate} />
+          <Burgers
+            cartUpdated={cartUpdated}
+            onCartUpdate={handleCartUpdate}
+            setIsCartOpen={setIsCartOpen}
+            search={search}
+          />
         </div>
         {showCart && (
           <Cart cartUpdated={cartUpdated} onCartUpdate={handleCartUpdate} />
         )}
+        <div className={styles.cartPopupProduct}>
+          <CartPopup
+            isOpen={isCartOpen}
+            cartUpdated={cartUpdated}
+            onClose={() => setIsCartOpen(false)}
+          />
+        </div>
       </div>
-      <div className={styles.informationWrapper}>
-        <div className={styles.information}>
-          <div className={styles.deliveryOperation}>
-            <div className={styles.delInfo}>
+      <div className={styles.informationWrapperProduct}>
+        <div className={styles.informationProduct}>
+          <div className={styles.deliveryOperationProduct}>
+            <div className={styles.deliveryInfoProduct}>
               <img src={delInfoImg} alt="img" />
               <p>Delivery information</p>
             </div>
-            <div className={styles.deliveryTiming}>
+            <div className={styles.deliveryTimingProduct}>
               <p>
                 <span>Monday:</span> 12:00 AM–3:00 AM, 8:00 AM–3:00 AM
               </p>
@@ -160,16 +189,16 @@ const Product = () => {
             </div>
           </div>
 
-          <div className={styles.contactInformation}>
+          <div className={styles.contactInformationProduct}>
             <div className={styles.contactImg}>
               <img src={IdImg} alt="image" />
               <p>Contact information</p>
             </div>
-            <div className={styles.contactMe}>
+            <div className={styles.contactMeProduct}>
               <p>If you have allergies or other dietary</p>
               <p>restrictions, please contact the restaurant. The</p>
               <p>restaurant will provide food-specific</p>
-              <p>information upon request.</p>
+              <p>nformation upon request.</p>
               <h3>Phone number</h3>
               <p>+934443-43</p>
               <h3>Website</h3>
@@ -177,12 +206,12 @@ const Product = () => {
             </div>
           </div>
 
-          <div className={styles.operationTime}>
-            <div className={styles.operationImg}>
+          <div className={styles.operationTimeProduct}>
+            <div className={styles.operationImgProduct}>
               <img src={Clock2Img} alt="img" />
-              <p>Delivery information</p>
+              <p>Operational Times</p>
             </div>
-            <div className={styles.operationTiming}>
+            <div className={styles.operationTimingProduct}>
               <p>
                 <span>Monday:</span> 8:00 AM–3:00 AM
               </p>
@@ -207,16 +236,16 @@ const Product = () => {
             </div>
           </div>
         </div>
-        <div className={styles.mapComponent}>
+        <div className={styles.mapProduct}>
           <MapComponent />
         </div>
       </div>
 
-      <div className={styles.reviewWrapper}>
+      <div className={styles.reviewProduct}>
         <Review />
       </div>
 
-      <div className={styles.similarRestaurentWrapper}>
+      <div className={styles.similarRestaurantProduct}>
         <SimilarRestaurent />
       </div>
       <Footer />

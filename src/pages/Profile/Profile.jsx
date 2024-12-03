@@ -12,6 +12,7 @@ import EditCard from "../../components/EditCardModal/EditCard";
 import AddCardInProfile from "../../components/AddCardProfile/AddCardProfile";
 import { getUserProfile, updatedUserProfile, UserCard } from "../../services";
 import toast from "react-hot-toast";
+import arrowLeftImg from "../../assets/ArrowLeft.png";
 
 const Profile = () => {
   const [isPopupOpen, setPopupOpen] = useState(false);
@@ -36,18 +37,24 @@ const Profile = () => {
   };
 
   useEffect(() => {
+    if (!localStorage.getItem("token")) {
+      return;
+    }
     const getDebitCard = async () => {
       try {
         const response = await UserCard();
         setUserDebitCard(response.userCard);
       } catch (error) {
-        console.error(error.message);
+        toast.error(error.message);
       }
     };
     getDebitCard();
   }, [isPopupOpen, isEditCard]);
 
   useEffect(() => {
+    if (!localStorage.getItem("token")) {
+      return;
+    }
     const getProfile = async () => {
       try {
         const response = await getUserProfile();
@@ -60,9 +67,10 @@ const Profile = () => {
   }, [isEditMode]);
 
   const handleEditToggle = () => {
-    // if (isEditMode) {
-    //   console.log("Updated Profile Data:", profileData);
-    // }
+    if (!localStorage.getItem("token")) {
+      toast.error("Please log in to continue.");
+      return;
+    }
     setIsEditMode(!isEditMode);
   };
 
@@ -75,6 +83,10 @@ const Profile = () => {
   };
 
   const handleUpdateData = async () => {
+    if (!localStorage.getItem("token")) {
+      toast.error("Please log in to continue.");
+      return;
+    }
     if (isEditMode) {
       const { fullName, gender, country } = profileData;
       if (!gender && !fullName && !country) {
@@ -107,6 +119,10 @@ const Profile = () => {
   };
 
   const handleAddCard = () => {
+    if (!localStorage.getItem("token")) {
+      toast.error("Please log in to continue.");
+      return;
+    }
     setPopupOpen(true);
   };
 
@@ -114,22 +130,32 @@ const Profile = () => {
 
   return (
     <>
-      <div className={styles.container}>
+      <div className={styles.containerProfile}>
         <Nav />
-        <div className={styles.allNav}>
+        <div className={styles.allNavProfile}>
           <AllNavBar />
         </div>
-        <div className={styles.checkoutName}>
+        <div className={styles.checkoutNameProfile}>
           <img src={arrow} alt="Back" onClick={() => navigate(-1)} />
           <h1>My Profile</h1>
         </div>
         <div className={styles.profileContainer}>
-          <div className={styles.profileImageContainer}>
-            <div className={styles.profileImage}>
+          <div className={styles.ImageContainerProfile}>
+            <div className={styles.imageProfile}>
               <img src={profileImg} alt="Profile" />
               <p>{name}</p>
             </div>
-            <div className={styles.saveEditButton}>
+            <div className={styles.checkoutArrowProfile}>
+              <div className={styles.arrowLeftProfile}>
+                <img
+                  src={arrowLeftImg}
+                  alt="arrow-image"
+                  onClick={() => navigate(-1)}
+                />
+              </div>
+              <p>Your Profile</p>
+            </div>
+            <div className={styles.saveEditButtonProfile}>
               <button disabled={loading}>
                 {isEditMode ? (
                   <span onClick={handleUpdateData}>Save</span>
@@ -140,7 +166,7 @@ const Profile = () => {
             </div>
           </div>
           <div className={styles.profileDetails}>
-            <div className={styles.profileFullName}>
+            <div className={styles.userNameProfile}>
               <p>Full Name</p>
               <input
                 type="text"
@@ -151,7 +177,7 @@ const Profile = () => {
                 readOnly={!isEditMode}
               />
             </div>
-            <div className={styles.profileEmail}>
+            <div className={styles.userEmailProfile}>
               <p>Email Address</p>
               <input
                 type="email"
@@ -163,7 +189,7 @@ const Profile = () => {
                 onClick={handleEmailEdit}
               />
             </div>
-            <div className={styles.profileGender}>
+            <div className={styles.userGenderProfile}>
               <p>Gender</p>
               <input
                 type="text"
@@ -174,7 +200,7 @@ const Profile = () => {
                 readOnly={!isEditMode}
               />
             </div>
-            <div className={styles.profileCountry}>
+            <div className={styles.userCountryProfile}>
               <p>Country</p>
               <input
                 type="text"
@@ -188,15 +214,15 @@ const Profile = () => {
           </div>
           <div className={styles.line}></div>
 
-          <div className={styles.debitCards}>
+          <div className={styles.debitCardsProfile}>
             <h3>Saved Payment Methods</h3>
-            <div className={styles.cardDetailsWrapper}>
+            <div className={styles.cardDetailsSectionProfile}>
               {userDebitCard.map((debitCard) => (
-                <div className={styles.cardDetails} key={debitCard._id}>
-                  <div className={styles.cardImg}>
+                <div className={styles.cardDetailsProfile} key={debitCard._id}>
+                  <div className={styles.cardImageProfile}>
                     <img src={cardImage} alt="Card" />
                   </div>
-                  <div className={styles.cardnumber}>
+                  <div className={styles.cardNumProfile}>
                     <p>{debitCard.cardNumber}</p>
                     <h3>{debitCard.cardName}</h3>
                   </div>
@@ -210,7 +236,7 @@ const Profile = () => {
                   />
                 </div>
               ))}
-              <div className={styles.addCards}>
+              <div className={styles.addCardsProfile}>
                 <button onClick={handleAddCard}>+</button>
                 <p>Add New Card</p>
               </div>
@@ -229,7 +255,7 @@ const Profile = () => {
           setPopupOpen={setPopupOpen}
         />
       </div>
-      <div className={styles.footer}>
+      <div className={styles.footerProfile}>
         <Footer />
       </div>
     </>

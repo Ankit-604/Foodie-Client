@@ -1,10 +1,10 @@
-.container {
+.containerProfile {
   padding: 0 70px;
 }
-.allNav {
+.allNavProfile {
   padding: 0 50px;
 }
-.checkoutName {
+.checkoutNameProfile {
   width: 346px;
   height: 48px;
   display: flex;
@@ -13,12 +13,12 @@
   padding: 0 50px;
   margin-top: 40px;
 }
-.checkoutName > img {
+.checkoutNameProfile > img {
   width: 30px;
   height: 30px;
   cursor: pointer;
 }
-.checkoutName > h1 {
+.checkoutNameProfile > h1 {
   font-size: 26px;
   font-weight: 600;
   line-height: 48px;
@@ -28,31 +28,32 @@
   padding: 0 50px;
   margin-top: 30px;
 }
-.profileImageContainer {
+.ImageContainerProfile {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.profileImage {
+.imageProfile {
   display: flex;
   align-items: center;
   gap: 20px;
 }
-.profileImage > img {
+.imageProfile > img {
   height: 70px;
   width: 70px;
 }
-.profileImage > p {
+.imageProfile > p {
   font-size: 20px;
   font-weight: 600;
 }
-.saveEditButton > button {
+.saveEditButtonProfile > button {
   height: 36px;
   width: 60px;
   background: #fc8a06;
   color: #ffffff;
   border: none;
   border-radius: 6px;
+  cursor: pointer;
 }
 .profileDetails {
   display: grid;
@@ -61,12 +62,12 @@
   gap: 20px;
   margin-top: 20px;
 }
-.profileFullName {
+.userNameProfile {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.profileFullName > input {
+.userNameProfile > input {
   width: 98%;
   height: 40px;
   background: #f9f9f9;
@@ -75,16 +76,19 @@
   border-radius: 6px;
   padding-left: 20px;
 }
-.profileFullName > p {
+.userNameProfile > input:focus {
+  outline: 0.5px solid #afafaf;
+}
+.userNameProfile > p {
   font-size: 12px;
   font-weight: 400;
 }
-.profileEmail {
+.userEmailProfile {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.profileEmail > input {
+.userEmailProfile > input {
   width: 100%;
   height: 40px;
   background: #f9f9f9;
@@ -93,16 +97,16 @@
   border-radius: 6px;
   padding-left: 20px;
 }
-.profileEmail > p {
+.userEmailProfile > p {
   font-size: 12px;
   font-weight: 400;
 }
-.profileGender {
+.userGenderProfile {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.profileGender > input {
+.userGenderProfile > input {
   width: 98%;
   height: 40px;
   background: #f9f9f9;
@@ -111,16 +115,19 @@
   border-radius: 6px;
   padding-left: 20px;
 }
-.profileGender > p {
+.userGenderProfile > input:focus {
+  outline: 0.5px solid #afafaf;
+}
+.userGenderProfile > p {
   font-size: 12px;
   font-weight: 400;
 }
-.profileCountry {
+.userCountryProfile {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.profileCountry > input {
+.userCountryProfile > input {
   width: 100%;
   height: 40px;
   background: #f9f9f9;
@@ -129,7 +136,10 @@
   border-radius: 6px;
   padding-left: 20px;
 }
-.profileCountry > p {
+.userCountryProfile > input:focus {
+  outline: 0.5px solid #afafaf;
+}
+.userCountryProfile > p {
   font-size: 12px;
   font-weight: 400;
 }
@@ -138,12 +148,13 @@
   border: 1px solid #000000;
   margin-top: 40px;
 }
-.cardDetailsWrapper {
+.cardDetailsSectionProfile {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 30px;
 }
-.debitCards {
+.debitCardsProfile {
   height: auto;
   width: 100%;
   margin-top: 20px;
@@ -151,11 +162,11 @@
   flex-direction: column;
   gap: 20px;
 }
-.debitCards > h3 {
+.debitCardsProfile > h3 {
   font-size: 22px;
   font-weight: 600;
 }
-.cardDetails {
+.cardDetailsProfile {
   display: flex;
   align-items: center;
   border: 0.5px solid #00000080;
@@ -165,7 +176,7 @@
   justify-content: space-between;
   border-radius: 12px;
 }
-.cardImg {
+.cardImageProfile {
   height: 45px;
   width: 45px;
   background: #ffe8ce;
@@ -174,21 +185,21 @@
   justify-content: center;
   border-radius: 50%;
 }
-.cardnumber > p {
+.cardNumProfile > p {
   font-size: 16px;
   font-weight: 500;
 }
-.cardnumber > h3 {
+.cardNumProfile > h3 {
   font-size: 10px;
   font-weight: 500;
   color: #83858a;
 }
-.cardDetails > img {
+.cardDetailsProfile > img {
   height: 14px;
   width: 14px;
   cursor: pointer;
 }
-.addCards {
+.addCardsProfile {
   height: 70px;
   width: 200px;
   border: 0.5px dotted #00000080;
@@ -198,7 +209,7 @@
   justify-content: center;
   gap: 16px;
 }
-.addCards > button {
+.addCardsProfile > button {
   height: 45px;
   width: 45px;
   background: #ffe8ce;
@@ -211,10 +222,92 @@
   color: #fc8a06;
   cursor: pointer;
 }
-.addCards > p {
+.addCardsProfile > p {
   font-size: 17px;
   font-weight: 400;
 }
-.footer {
+.footerProfile {
   margin-top: 160px;
+}
+.checkoutArrowProfile {
+  display: none;
+}
+@media (max-width: 992px) {
+  .profileDetails {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  .imageProfile {
+    display: none;
+  }
+  .checkoutArrowProfile {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 60%;
+  }
+  .arrowLeftProfile {
+    height: 25px;
+    width: 25px;
+    background: #fc8a06;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
+  .arrowLeftProfile > img {
+    height: 15px;
+    width: 15px;
+    cursor: pointer;
+  }
+  .checkoutArrowProfile > p {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 31.2px;
+    text-align: left;
+  }
+  .checkoutNameProfile {
+    display: none;
+  }
+  .allNavProfile {
+    display: none;
+  }
+  .containerProfile {
+    padding: 0 20px;
+  }
+  .profileContainer {
+    padding: 0 10px;
+  }
+  .cardDetailsSectionProfile {
+    flex-wrap: wrap;
+  }
+  .cardDetailsProfile {
+    width: 100%;
+  }
+
+  .cardNumProfile {
+    width: 80%;
+  }
+  .addCardsProfile {
+    width: 100%;
+    justify-content: start;
+    padding-left: 10px;
+  }
+  .containerProfile {
+    padding-bottom: 50px;
+  }
+  .footerProfile {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  .cardNumProfile {
+    width: 70%;
+  }
+  .debitCardsProfile > h3 {
+    font-size: 16px;
+  }
 }

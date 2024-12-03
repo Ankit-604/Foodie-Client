@@ -1,3 +1,4 @@
+/* Desktop Styling - Unchanged */
 .header {
   display: flex;
   height: 120%;
@@ -5,6 +6,7 @@
   padding: 20px;
   gap: 10px;
 }
+
 .loginPage {
   display: flex;
   height: 100%;
@@ -12,24 +14,29 @@
   justify-content: center;
   align-items: center;
 }
+
 .items {
   width: 60%;
   height: 85%;
 }
+
 .loginLogoWrapper {
   display: flex;
   justify-content: center;
 }
+
 .loginLogo {
   height: 13%;
   width: 47%;
   display: flex;
   align-items: center;
 }
+
 .loginLogo > img {
   height: 100%;
   width: 100%;
 }
+
 .loginWelcome {
   height: 10%;
   width: 100%;
@@ -38,6 +45,7 @@
   justify-content: start;
   margin-top: 30px;
 }
+
 .loginWelcome > h1 {
   font-size: 34px;
   font-weight: 600;
@@ -47,6 +55,7 @@
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
 }
+
 .loginDescription {
   height: auto;
   width: 100%;
@@ -55,6 +64,7 @@
   justify-content: start;
   margin-top: 20px;
 }
+
 .loginDescription > p {
   font-size: 19px;
   color: #313957;
@@ -64,17 +74,14 @@
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
 }
+
 form {
   display: flex;
   flex-direction: column;
   margin-top: 30px;
   gap: 20px;
 }
-.input {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
+
 .input > label {
   color: #0c1421;
   font-size: 16px;
@@ -85,6 +92,7 @@ form {
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
 }
+
 .input > input {
   height: 45px;
   width: 100%;
@@ -101,6 +109,7 @@ form {
   border-radius: 100px;
   padding-left: 20px;
 }
+
 .loginBtn {
   height: 50px;
   width: 100%;
@@ -118,6 +127,7 @@ form {
   margin-top: 36px;
   cursor: pointer;
 }
+
 .signup {
   height: 30px;
   width: 100%;
@@ -126,6 +136,7 @@ form {
   align-items: center;
   justify-content: center;
 }
+
 .signup > p {
   font-size: 18px;
   font-weight: 400;
@@ -136,6 +147,7 @@ form {
   text-decoration-skip-ink: none;
   color: #313957;
 }
+
 .signup > p > span {
   font-size: 18px;
   font-weight: 400;
@@ -147,14 +159,17 @@ form {
   cursor: pointer;
   color: #fc8a06;
 }
+
 .loginImg {
   height: 100%;
   width: 50%;
 }
+
 .img {
   height: 100%;
   width: 100%;
 }
+
 .img > img {
   height: 100%;
   width: 100%;
@@ -204,5 +219,52 @@ form {
   }
   .footerList2 {
     height: 20%;
+  }
+}
+
+@media (max-width: 992px) {
+  .loginImg {
+    display: none;
+  }
+  .loginPage {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .loginDescription > p {
+    font-size: 15px;
+    line-height: 24px;
+  }
+  .loginDescription > p > span {
+    font-size: 15px;
+  }
+  .loginWelcome > h1 {
+    font-size: 28px;
+    line-height: 10px;
+  }
+}
+@media (max-width: 480px) {
+  .signup > p {
+    font-size: 15px;
+  }
+  .header {
+    padding: 20px 0px;
+  }
+}
+@media (max-width: 415px) {
+  .signup > p {
+    font-size: 13px;
+  }
+  .loginDescription > p {
+    font-size: 13px;
+    line-height: 24px;
+  }
+  .loginWelcome > h1 {
+    font-size: 22px;
+    line-height: 10px;
+  }
+  .loginDescription > p > span {
+    font-size: 13px;
   }
 }

@@ -1,10 +1,10 @@
-.container {
+.orderSuccessMain {
   padding: 0 70px;
 }
-.allNav {
+.orderSuccessAllNav {
   padding: 0 50px;
 }
-.successWrapper {
+.orderSuccessWrapper {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,33 +21,33 @@
   align-items: center;
   justify-content: center;
 }
-.successImage {
+.orderSuccessImg {
   height: 130px;
   width: 130px;
   border-radius: 50%;
 }
-.successImage > img {
+.orderSuccessImg > img {
   height: 100%;
   width: 100%;
 }
-.successWrapper > h3 {
+.orderSuccessWrapper > h3 {
   font-size: 15px;
   font-weight: 600;
   text-align: center;
 }
-.orderDescription > p {
+.orderSuccessOrderDescription > p {
   font-size: 12px;
   font-weight: 400;
   text-align: left;
   color: #83858a;
 }
-.orderDescription > h3 {
+.orderSuccessOrderDescription > h3 {
   font-size: 12px;
   font-weight: 400;
   text-align: center;
   color: #83858a;
 }
-.orderDetails {
+.orderSuccessOrderDetails {
   height: auto;
   width: 300px;
   border: 1px solid #00000080;
@@ -59,12 +59,12 @@
   gap: 10px;
   border-radius: 12px;
 }
-.orderDetails {
+.orderSuccessOrderDetails {
   font-size: 12px;
   font-weight: 500;
   line-height: 21px;
 }
-.orderDetails > button {
+.orderSuccessOrderDetails > button {
   height: 30px;
   width: 100%;
   background: #fc8a06;
@@ -74,7 +74,20 @@
   font-size: 12px;
   font-weight: 500;
   text-align: center;
+  cursor: pointer;
 }
 .footer {
   margin-top: 70px;
+}
+
+@media (max-width: 992px) {
+  .orderSuccessAllNav {
+    display: none;
+  }
+  .footer {
+    display: none;
+  }
+  .orderSuccessMain {
+    padding: 0;
+  }
 }

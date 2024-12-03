@@ -33,13 +33,19 @@ const EditAddressModal = ({ isOpen, onClose, setIsEditPopup, id }) => {
     try {
       const response = await updatedUserAddress(formData, id);
       if (response.message === "Address updated successfully") {
-        toast.success("Address added successfully");
+        toast.success(response.message);
+        setFormData({
+          state: "",
+          city: "",
+          pinCode: "",
+          phoneNumber: "",
+          fullAddress: "",
+        });
       } else {
         toast.error(response.message);
       }
     } catch (error) {
       toast.error(error.message);
-      console.log(error.message);
     } finally {
       setLoading(false);
       setIsEditPopup(false);
@@ -48,14 +54,17 @@ const EditAddressModal = ({ isOpen, onClose, setIsEditPopup, id }) => {
 
   if (!isOpen) return null;
   return (
-    <div className={styles.backdrop} onClick={onClose}>
-      <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
-        <div className={styles.addressImage}>
+    <div className={styles.mainEditAddress} onClick={onClose}>
+      <div
+        className={styles.sectionEditAddress}
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className={styles.addressImageEditAddress}>
           <img src={addressImg} alt="image" />
           <h2>Edit Address</h2>
         </div>
         <form className={styles.form} onSubmit={handleSubmit}>
-          <div className={styles.row}>
+          <div className={styles.rowEditAddress}>
             <select
               className={styles.input}
               value={formData.state}
@@ -131,7 +140,7 @@ const EditAddressModal = ({ isOpen, onClose, setIsEditPopup, id }) => {
               setFormData({ ...formData, fullAddress: e.target.value })
             }
           ></textarea>
-          <div className={styles.saveBtn}>
+          <div className={styles.saveBtnEditAddress}>
             <button type="submit" className={styles.saveButton}>
               {loading ? "Loading" : "Save"}
             </button>

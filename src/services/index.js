@@ -1,4 +1,5 @@
-const BACKEND_URL = "https://foodie-server-v291.onrender.com";
+// const BACKEND_URL = "https://foodie-server-v291.onrender.com";
+const BACKEND_URL = "http://localhost:3019";
 
 console.log("BACKEND_URL:", BACKEND_URL);
 export const userSignUp = async (data) => {

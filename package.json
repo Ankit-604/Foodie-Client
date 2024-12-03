@@ -1,8 +1,11 @@
 {
-  "name": "food-delivery-app---frontend",
+  "name": "foodie-client",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "author": "Ankit Kumar Sharma",
+  "license": "MIT",
+  "description": "Food Delivery App using Mern Stack",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

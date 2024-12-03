@@ -39,7 +39,7 @@ const MapComponent = () => {
             location: "Marathalli",
             address: "123, Main St, Marathalli, Bengaluru, Karnataka, India",
             phone: "+91-9876543210",
-            website: "http://mcdonalds.in/",
+            websiteMap: "http://mcdonalds.in/",
           });
 
           const mapContainer = document.getElementById("map");
@@ -62,25 +62,28 @@ const MapComponent = () => {
   }, [popupVisible]);
 
   return (
-    <div className="map-container">
+    <div className="mapContainer">
       <div id="map"></div>
 
-      {popupVisible && (
-        <div className="custom-popup">
-          <div className="cardDetails">
-            <h2>McDonald's</h2>
-            <p>Marathalli</p>
+      {popupVisible && popupData && (
+        <div
+          className="customPopup "
+          style={{ left: popupPosition.x, top: popupPosition.y }}
+        >
+          <div className="cardDetailsMap">
+            <h2>{popupData.title}</h2>
+            <p>{popupData.location}</p>
           </div>
-          <div className="description">
-            <h3>123, Main St, Marathalli, Bengaluru, Karnataka, India</h3>
+          <div className="descriptionMap">
+            <h3>{popupData.address}</h3>
           </div>
-          <div className="number">
-            <h3>Phone number</h3>
-            <p>+91-9568741230</p>
+          <div className="numberMap">
+            <h3>Phone numberMap</h3>
+            <p>{popupData.phone}</p>
           </div>
-          <div className="website">
+          <div className="websiteMap">
             <h3>Website</h3>
-            <p>http://mcdonalds.in/</p>
+            <p>{popupData.websiteMap}</p>
           </div>
         </div>
       )}

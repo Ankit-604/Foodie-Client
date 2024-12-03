@@ -1,13 +1,13 @@
-.paymentContainer {
+.paymentMain {
   padding: 0 70px;
   height: auto;
   width: 100%;
 }
-.allNav {
+.paymentAllNav {
   padding: 0 50px;
 }
 
-.checkout {
+.paymentCheckout {
   height: auto;
   width: 100%;
   display: flex;
@@ -16,39 +16,39 @@
   margin-top: 30px;
 }
 
-.checkoutName {
+.checkoutNamePayment {
   width: 346px;
   height: 48px;
   display: flex;
   align-items: center;
   gap: 10px;
 }
-.checkoutName > img {
+.checkoutNamePayment > img {
   width: 30px;
   height: 30px;
   cursor: pointer;
 }
-.checkoutName > h1 {
+.checkoutNamePayment > h1 {
   font-size: 26px;
   font-weight: 600;
   line-height: 48px;
   text-align: left;
 }
-.Details {
+.DetailsPayment {
   display: flex;
   gap: 20px;
 }
 
-.notesAndDetails {
+.notesAndDetailsPayment {
   height: auto;
   width: 65%;
 }
-.getItem {
+.getItemPayment {
   /* border: 1px solid #03081f; */
   padding: 10px;
   border-radius: 12px;
 }
-.checkoutDetails {
+.checkoutDetailsPayment {
   height: 60px;
   width: 100%;
   display: flex;
@@ -59,35 +59,35 @@
   border-radius: 56px;
   padding: 15px;
 }
-.checkoutDetails > p {
+.checkoutDetailsPayment > p {
   color: #028643;
   font-size: 14px;
   font-weight: 600;
   line-height: 25px;
 }
-.checkoutDetailsWrapper {
+.detailsWrapperPayment {
   display: flex;
   gap: 15px;
 }
-.checkoutDetailsWrapper > img {
+.detailsWrapperPayment > img {
   height: 48px;
   width: 48px;
 }
-.cartTitle {
+.cartTitlePayment {
   display: flex;
   flex-direction: column;
 }
-.cartTitle > h3 {
+.cartTitlePayment > h3 {
   font-size: 16px;
   font-weight: 600;
   line-height: 24px;
   text-align: left;
 }
-.allItem {
+.allItemPayment {
   display: flex;
   flex-direction: column;
 }
-.cartTitle > p {
+.cartTitlePayment > p {
   color: #83858a;
   font-size: 12px;
   font-weight: 400;
@@ -130,11 +130,11 @@
   padding-top: 7px;
   outline: none;
 }
-.allAddressDetails {
+.allAddressDetailsPayment {
   height: auto;
   width: 35%;
 }
-.allAmount {
+.allAmountPayment {
   border: 1px solid #000000;
   padding: 15px;
   border-radius: 12px;
@@ -153,18 +153,18 @@
   align-items: center;
   gap: 20px;
 }
-.amount {
+.amountPayment {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.amount > p {
+.amountPayment > p {
   color: #83858a;
   font-size: 20px;
   font-weight: 400;
   line-height: 32px;
 }
-.amount > h3 {
+.amountPayment > h3 {
   font-size: 20px;
   font-weight: 700;
   line-height: 32px;
@@ -192,7 +192,7 @@
   margin-top: 15px;
 }
 
-.allAmount > button {
+.allAmountPayment > button {
   height: 40px;
   width: 100%;
   background: #fc8a06;
@@ -206,7 +206,7 @@
   margin-top: 30px;
   cursor: pointer;
 }
-.wallet {
+.walletPayment {
   height: 42px;
   width: 42px;
   border-radius: 50%;
@@ -217,11 +217,11 @@
   align-items: center;
   justify-content: center;
 }
-.wallet > img {
+.walletPayment > img {
   height: 19px;
   width: 19px;
 }
-.paymentCards {
+.cardsPayment {
   height: 50px;
   width: 100%;
   display: flex;
@@ -233,32 +233,33 @@
   padding: 15px;
   margin-top: 20px;
 }
-.paymentCards > p {
+.cardsPayment > p {
   color: #028643;
   font-size: 14px;
   font-weight: 600;
   line-height: 25px;
 }
-.paymentCardsWrapper {
+.cardsWrapperPayment {
   display: flex;
   gap: 15px;
 }
-.paymentCardsWrapper > img {
+.cardsWrapperPayment > img {
   height: 48px;
   width: 48px;
 }
-.cardTitle {
+.cardTitlePayment {
   display: flex;
   flex-direction: column;
 }
-.cardTitle > h3 {
+.cardTitlePayment > h3 {
   font-size: 16px;
   font-weight: 400;
   line-height: 25.6px;
   text-align: center;
+  cursor: pointer;
 }
 
-.mastercard {
+.mastercardPayment {
   height: 26px;
   width: 26px;
   border-radius: 50%;
@@ -274,20 +275,22 @@
   width: 10px;
 }
 
-.addBtn > button {
+.addBtnPayment > button {
   height: 20px;
   width: 20px;
   background: none;
   border: none;
   font-size: 30px;
+  cursor: pointer;
 }
-.addBtnTitle > h3 {
+.addBtnTitlePayment > h3 {
   font-size: 14px;
   font-weight: 400;
   line-height: 22.4px;
   text-align: center;
+  cursor: pointer;
 }
-.addCards{
+.addCards {
   height: 50px;
   width: 100%;
   display: flex;
@@ -299,22 +302,22 @@
   padding: 15px;
   margin-top: 20px;
 }
-.addCardssWrapper{
+.addCardsWrapperPayment {
   display: flex;
   align-items: center;
-  gap: 15px; 
+  gap: 15px;
 }
-.check{
+.checkPayment {
   height: 25px;
   width: 25px;
   border-radius: 50%;
 }
 
-.check >input[type="checkbox"] {
+.checkPayment > input[type="checkbox"] {
   appearance: none;
-  -webkit-appearance: none; 
+  -webkit-appearance: none;
   background-color: #fff;
-  border: 1.5px solid #83858A;
+  border: 1.5px solid #83858a;
   border-radius: 50%;
   width: 20px;
   height: 20px;
@@ -323,32 +326,131 @@
   transition: all 0.2s ease-in-out;
 }
 
-
-.check > input[type="checkbox"]:checked {
+.checkPayment > input[type="checkbox"]:checked {
   background-color: #007bff;
-  border-color: #007bff; 
-  box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.3); 
+  border-color: #007bff;
+  box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.3);
 }
 
-
-.check > input[type="checkbox"]:checked::before {
+.checkPayment > input[type="checkbox"]:checked::before {
   content: "";
   display: block;
   width: 8px;
   height: 8px;
   margin: auto;
   background-color: #fff;
-  border-radius: 50%; 
+  border-radius: 50%;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
 }
 
-.check >input[type="checkbox"]:hover {
-  border-color: #0056b3; 
-  box-shadow: 0 0 0 4px rgba(0, 86, 179, 0.2); 
+.checkPayment > input[type="checkbox"]:hover {
+  border-color: #0056b3;
+  box-shadow: 0 0 0 4px rgba(0, 86, 179, 0.2);
 }
-.similarRestaurentWrapper{
+.similarRestaurentWrapper {
+  margin-top: 100px;
+  padding: 0 70px;
+  padding-bottom: 70px;
+}
+.checkoutArrowPayment {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .paymentAllNav {
+    display: none;
+  }
+  .DetailsPayment {
+    flex-direction: column;
+    align-items: center;
+  }
+  .checkoutArrowPayment {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 60%;
+  }
+  .arrowLeftPayment {
+    height: 25px;
+    width: 25px;
+    background: #fc8a06;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
+  .arrowLeftPayment > img {
+    height: 15px;
+    width: 15px;
+    cursor: pointer;
+  }
+  .checkoutArrowPayment > p {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 31.2px;
+    text-align: left;
+  }
+  .checkoutNamePayment {
+    width: 50%;
+    justify-content: center;
+    margin-left: 17%;
+    display: none;
+  }
+  .allAddressDetailsPayment {
+    width: 65%;
+    margin-top: 50px;
+    border-top: 1px solid #afafaf;
+    margin-bottom: 30px;
+  }
+  .similar {
+    display: none;
+  }
+  .allAddressDetailsPayment > p {
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  .allAmountPayment {
+    border: none;
+  }
+  .paymentMain {
+    padding: 0 0px;
+    height: auto;
+    width: 100%;
+  }
+  .similarRestaurentWrapper {
+    display: none;
+  }
+  .footerPayment {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  .notesAndDetailsPayment {
+    width: 380px;
+  }
+  .allAddressDetailsPayment {
+    width: 380px;
+  }
+  .checkoutArrowPayment {
+    width: 360px;
+  }
+}
+@media (max-width: 400px) {
+  .notesAndDetailsPayment {
+    width: 330px;
+  }
+  .allAddressDetailsPayment {
+    width: 330px;
+  }
+  .checkoutArrowPayment {
+    width: 310px;
+  }
+}
+.similarRestaurentWrapper {
   margin-top: 100px;
   padding: 0 70px;
   padding-bottom: 70px;

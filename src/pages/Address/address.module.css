@@ -1,5 +1,6 @@
-.container {
+.containerAddresss {
   padding: 0 70px;
+  margin-bottom: 400px;
 }
 .addAddress {
   margin-top: 30px;
@@ -7,23 +8,23 @@
   flex-wrap: wrap;
   gap: 20px;
 }
-.addressHeading {
+.headingAddresss {
   display: flex;
   align-items: center;
   gap: 10px;
   margin-top: 40px;
 }
-.addressHeading > img {
+.headingAddresss > img {
   width: 39px;
   height: 39px;
   cursor: pointer;
 }
-.addressHeading > p {
+.headingAddresss > p {
   font-size: 25px;
   font-weight: 600;
   line-height: 48px;
 }
-.addAddressBtn {
+.addAddressButton {
   width: 200px;
   height: 170px;
   border-radius: 12px;
@@ -33,12 +34,12 @@
   align-items: center;
   justify-content: center;
 }
-.addAddressBtn > p {
+.addAddressButton > p {
   font-size: 15px;
   font-weight: 400;
   line-height: 27px;
 }
-.addBtn {
+.addbuttonAddress {
   height: 35px;
   width: 35px;
   background: #ffe8ce;
@@ -47,21 +48,21 @@
   justify-content: center;
   border-radius: 50%;
 }
-.addBtn > button {
+.addbuttonAddress > button {
   color: #fc8a06;
   font-size: 24px;
   border: none;
   background: none;
   cursor: pointer;
 }
-.userAddress {
+.userAddressAddress {
   width: 200px;
   height: 170px;
   border-radius: 12px;
   border: 1px solid #afafaf;
   padding: 10px;
 }
-.userName {
+.userNameAddress {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -69,12 +70,12 @@
   width: 100%;
 }
 
-.userName > p {
+.userNameAddress > p {
   font-size: 16px;
   font-weight: 600;
   line-height: 19.2px;
 }
-.userName > button {
+.userNameAddress > button {
   width: 69px;
   height: 22px;
   border-radius: 100px;
@@ -84,25 +85,25 @@
   color: #fc8a06;
   cursor: pointer;
 }
-.userAddress > p {
+.userAddressAddress > p {
   font-size: 12px;
   font-weight: 400;
   line-height: 16.8px;
   margin-top: 20px;
 }
-.userAddress > h3 {
+.userAddressAddress > h3 {
   font-size: 12px;
   font-weight: 400;
   line-height: 16.8px;
   margin-top: 10px;
 }
-.editRemove {
+.editRemoveAddress {
   display: flex;
   align-items: center;
   gap: 5px;
   margin-top: 20px;
 }
-.editRemove > p {
+.editRemoveAddress > p {
   font-size: 10px;
   font-weight: 400;
   line-height: 16.8px;
@@ -112,4 +113,64 @@
 .line {
   border: 1px solid #afafaf;
   height: 12px;
+}
+
+@media (max-width: 992px) {
+  .allNavAddresss {
+    display: none;
+  }
+  .footerAddress {
+    display: none;
+  }
+  .headingAddresss {
+    display: none;
+  }
+  .checkoutArrowAddresss {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 60%;
+    margin-top: 40px;
+  }
+  .arrowLeftAddresss {
+    height: 25px;
+    width: 25px;
+    background: #fc8a06;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
+  .arrowLeftAddresss > img {
+    height: 15px;
+    width: 15px;
+    cursor: pointer;
+  }
+  .checkoutArrowAddresss > p {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 31.2px;
+    text-align: left;
+  }
+  .addAddressButton {
+    flex-wrap: wrap;
+  }
+  .addAddressButton {
+    width: 100%;
+    height: 60px;
+    flex-direction: row;
+    gap: 20px;
+  }
+  .userAddressAddress {
+    width: 100%;
+  }
+  .containerAddresss {
+    padding: 0 20px;
+    padding-bottom: 150px;
+  }
+}
+@media (max-width: 450px) {
+  .checkoutArrowAddresss > p {
+    font-size: 16px;
+  }
 }

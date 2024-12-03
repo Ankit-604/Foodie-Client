@@ -5,6 +5,7 @@ import nextBtn from "../../assets/next.png";
 import profileImg from "../../assets/profile.png";
 import TimeImg from "../../assets/TimeSpan.png";
 import ratingImg from "../../assets/rating.png";
+import toast from "react-hot-toast";
 import { getImage, getUserReview } from "../../services";
 
 const Review = () => {
@@ -18,7 +19,7 @@ const Review = () => {
         const response = await getUserReview();
         setUserReview(response.data);
       } catch (error) {
-        console.log(error.message);
+        toast.log(error.message);
       }
     };
     getReviews();
@@ -31,7 +32,7 @@ const Review = () => {
       };
       getImageUrl();
     } catch (error) {
-      console.error(error);
+      toast.error(error);
     }
   }, []);
 
@@ -48,10 +49,10 @@ const Review = () => {
   };
 
   return (
-    <div className={styles.review}>
-      <div className={styles.reviewHeader}>
+    <div className={styles.reviewMain}>
+      <div className={styles.reviewMainHeader}>
         <h1>Customer Reviews</h1>
-        <div className={styles.nextBackBtn}>
+        <div className={styles.nextBackBtnReview}>
           <div className={styles.backBtn} onClick={handleBackBtn}>
             <img src={backBtn} alt="Back" />
           </div>
@@ -61,37 +62,45 @@ const Review = () => {
         </div>
       </div>
 
-      <div className={styles.carousel}>
+      <div className={styles.carouselReview}>
         <div
-          className={styles.allReviews}
+          className={styles.allReviewsMain}
           style={{ transform: `translateX(-${index * 476}px)` }}
         >
-          {userReview.map((review) => (
-            <div className={styles.profile} key={review._id}>
-              <div className={styles.profileContainer}>
-                <div className={styles.profileImgWrapper}>
+          {userReview.map((reviewMain) => (
+            <div className={styles.profileReview} key={reviewMain._id}>
+              <div className={styles.profileContainerReview}>
+                <div className={styles.profileImageReview}>
                   <div className={styles.profileImg}>
                     <img src={profileImg} alt="Profile" />
                   </div>
-                  <div className={styles.line}></div>
-                  <div className={styles.location}>
-                    <h3>{review.name}</h3>
-                    <h4>{review.location}</h4>
+                  <div className={styles.reviewLine}></div>
+                  <div className={styles.locationReview}>
+                    <h3>{reviewMain.name}</h3>
+                    <h4>{reviewMain.location}</h4>
                   </div>
                 </div>
-                <div className={styles.rating}>
+                <div className={styles.ratingReview}>
                   <img src={ratingImg} alt="Rating" />
                   <div className={styles.date}>
                     <img src={TimeImg} alt="Date" />
-                    <p>{review.date}</p>
+                    <p>{reviewMain.date}</p>
                   </div>
                 </div>
               </div>
               <div className={styles.description}>
-                <p>{review.description}</p>
+                <p>{reviewMain.description}</p>
               </div>
             </div>
           ))}
+        </div>
+        <div className={styles.nextBackBtn1}>
+          <div className={styles.backBtn} onClick={handleBackBtn}>
+            <img src={backBtn} alt="Back" />
+          </div>
+          <div className={styles.nextBtn} onClick={handleNextBtn}>
+            <img src={nextBtn} alt="Next" />
+          </div>
         </div>
       </div>
       <div className={styles.ratingImg}>
